@@ -13,32 +13,75 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Stack(
-            children: [
-              Positioned.fill(
-                left: 0,
-                child: Row(
-                  children: [
-                    RotatedBox(
-                      quarterTurns: -1,
+        child: Stack(
+          children: [
+            Positioned.fill(
+              left: 0,
+              child: Row(
+                children: [
+                  RotatedBox(
+                    quarterTurns: -1,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadiusDirectional.only(
+                          bottomStart: Radius.circular(20),
+                          bottomEnd: Radius.circular(20),
+                        ),
+                      ),
                       child: Row(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          TextButton(onPressed: () {}, child: Text('Shop')),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text('Shop'),
+                            style: TextButton.styleFrom(
+                              padding: EdgeInsets.all(0),
+                            ),
+                          ),
                           TextButton(onPressed: () {}, child: Text('Order')),
                           TextButton(onPressed: () {}, child: Text('Bag')),
                         ],
                       ),
                     ),
-                    Spacer(),
-                  ],
-                ),
+                  ),
+                  Spacer(),
+                  RotatedBox(
+                    quarterTurns: 1,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadiusDirectional.only(
+                          bottomStart: Radius.circular(20),
+                          bottomEnd: Radius.circular(20),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          TextButton(
+                            onPressed: () {},
+                            child: Text('Shop'),
+                            style: TextButton.styleFrom(
+                              padding: EdgeInsets.all(0),
+                            ),
+                          ),
+                          TextButton(onPressed: () {}, child: Text('Order')),
+                          TextButton(onPressed: () {}, child: Text('Bag')),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              Column(
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
                 children: [
                   CustomeAppbar(),
                   SizedBox(
@@ -47,8 +90,8 @@ class HomeView extends GetView<HomeController> {
                   SearchBar(),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
