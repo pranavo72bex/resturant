@@ -15,6 +15,30 @@ class HomeView extends GetView<HomeController> {
       body: SafeArea(
         child: Stack(
           children: [
+            SingleChildScrollView(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  CustomeAppbar(),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  SearchBar(),
+                  Container(
+                    height: 500,
+                    color: Colors.red,
+                  ),
+                  Container(
+                    height: 500,
+                    color: Colors.blue,
+                  ),
+                  Container(
+                    height: 500,
+                    color: Colors.green,
+                  ),
+                ],
+              ),
+            ),
             Positioned.fill(
               left: 0,
               child: Row(
@@ -76,18 +100,6 @@ class HomeView extends GetView<HomeController> {
                       ),
                     ),
                   ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  CustomeAppbar(),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  SearchBar(),
                 ],
               ),
             ),
