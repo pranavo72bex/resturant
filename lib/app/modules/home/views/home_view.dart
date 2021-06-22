@@ -26,7 +26,7 @@ class HomeView extends GetView<HomeController> {
                   SearchBar(),
                   Container(
                     height: 500,
-                    color: Colors.red,
+                    color: Colors.white,
                   ),
                   Container(
                     height: 500,
@@ -47,7 +47,7 @@ class HomeView extends GetView<HomeController> {
                     quarterTurns: -1,
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Colors.grey[300],
+                        color: Colors.grey[100],
                         borderRadius: BorderRadiusDirectional.only(
                           bottomStart: Radius.circular(20),
                           bottomEnd: Radius.circular(20),
@@ -60,13 +60,31 @@ class HomeView extends GetView<HomeController> {
                         children: [
                           TextButton(
                             onPressed: () {},
-                            child: Text('Shop'),
+                            child: Text(
+                              'Feeds',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             style: TextButton.styleFrom(
                               padding: EdgeInsets.all(0),
                             ),
                           ),
-                          TextButton(onPressed: () {}, child: Text('Order')),
-                          TextButton(onPressed: () {}, child: Text('Bag')),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Offers',
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'New products',
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -75,30 +93,24 @@ class HomeView extends GetView<HomeController> {
                   RotatedBox(
                     quarterTurns: 1,
                     child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadiusDirectional.only(
-                          bottomStart: Radius.circular(20),
-                          bottomEnd: Radius.circular(20),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadiusDirectional.only(
+                            bottomStart: Radius.circular(20),
+                            bottomEnd: Radius.circular(20),
+                          ),
                         ),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          TextButton(
-                            onPressed: () {},
-                            child: Text('Shop'),
-                            style: TextButton.styleFrom(
-                              padding: EdgeInsets.all(0),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              left: 30, right: 30, bottom: 5, top: 5),
+                          child: Text(
+                            'Near By',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                          TextButton(onPressed: () {}, child: Text('Order')),
-                          TextButton(onPressed: () {}, child: Text('Bag')),
-                        ],
-                      ),
-                    ),
+                        )),
                   ),
                 ],
               ),

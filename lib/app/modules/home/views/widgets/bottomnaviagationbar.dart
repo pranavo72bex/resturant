@@ -23,10 +23,11 @@ class _AppNavigatorState extends State<AppNavigator> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black12,
+        type: BottomNavigationBarType.fixed,
         elevation: 0,
-        iconSize: 24,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white54,
+        iconSize: 20,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
