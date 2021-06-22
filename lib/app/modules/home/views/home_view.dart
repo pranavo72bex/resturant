@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/themedata/commonwidgets/commonheard.dart';
 import 'package:restaurantsapp/app/modules/home/views/widgets/customappbar.dart';
 import 'package:restaurantsapp/app/modules/home/views/widgets/searchbar.dart';
 

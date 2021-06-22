@@ -13,20 +13,20 @@ class CustomeAppbar extends StatelessWidget {
         Spacer(),
         IconButton(
           onPressed: () {},
-          icon: Icon(
-            FontAwesomeIcons.user,
+          icon: ImageIcon(
+            AssetImage("assets/icons/usrs.png"),
           ),
         ),
         IconButton(
           onPressed: () {},
-          icon: Icon(
-            FontAwesomeIcons.qrcode,
+          icon: ImageIcon(
+            AssetImage("assets/icons/qrcode.png"),
           ),
         ),
         IconButton(
           onPressed: () {},
-          icon: Icon(
-            FontAwesomeIcons.telegramPlane,
+          icon: ImageIcon(
+            AssetImage("assets/icons/message.png"),
           ),
         ),
       ],

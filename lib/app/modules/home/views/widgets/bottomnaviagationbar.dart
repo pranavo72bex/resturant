@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:restaurantsapp/app/modules/home/views/home_view.dart';
 import 'package:restaurantsapp/app/modules/notification/notification_page.dart';
 import 'package:restaurantsapp/app/modules/shopping_bag.dart/shopping_bag_pag.dart';
@@ -32,30 +31,26 @@ class _AppNavigatorState extends State<AppNavigator> {
         items: [
           BottomNavigationBarItem(
             label: "",
-            icon: Icon(
-              FontAwesomeIcons.home,
-              color: Colors.black,
+            icon: ImageIcon(
+              AssetImage("assets/icons/home.png"),
             ),
           ),
           BottomNavigationBarItem(
             label: "",
-            icon: Icon(
-              FontAwesomeIcons.shoppingCart,
-              color: Colors.black,
+            icon: ImageIcon(
+              AssetImage("assets/icons/shoppingcart.png"),
             ),
           ),
           BottomNavigationBarItem(
             label: "",
-            icon: Icon(
-              FontAwesomeIcons.shoppingBag,
-              color: Colors.black,
+            icon: ImageIcon(
+              AssetImage("assets/icons/shoppingbag.png"),
             ),
           ),
           BottomNavigationBarItem(
             label: "",
-            icon: Icon(
-              FontAwesomeIcons.bell,
-              color: Colors.black,
+            icon: ImageIcon(
+              AssetImage("assets/icons/bell.png"),
             ),
           ),
         ],

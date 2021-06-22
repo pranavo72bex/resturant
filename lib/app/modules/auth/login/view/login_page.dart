@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurantsapp/app/data/themedata/commonwidgets/commonheard.dart';
-import 'package:restaurantsapp/app/modules/home/views/home_view.dart';
 import 'package:restaurantsapp/app/modules/home/views/widgets/bottomnaviagationbar.dart';
 
 class LoginPage extends StatelessWidget {
