@@ -46,7 +46,7 @@ class OnboardingScreens extends StatelessWidget {
                     Get.off(() => RegisterPage());
                   },
                   icon: _cutombuttons(),
-                  splashColor: Colors.blue[200],
+                  splashColor: Kfadedblue,
                 ),
               )
             ],
@@ -61,7 +61,7 @@ class OnboardingScreens extends StatelessWidget {
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.blue,
+        color: Kblue,
       ),
       child: ImageIcon(
         AssetImage("assets/icons/onboardingarrow.png"),

@@ -21,7 +21,7 @@ class _AppNavigatorState extends State<AppNavigator> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black12,
+        backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         elevation: 0,
         iconSize: 20,

@@ -18,6 +18,9 @@ const link = TextStyle(
 );
 
 //colors
-const Kgrey = Colors.grey;
-const Kblack = Colors.black;
-const Kblue = Colors.blue;
+const Kgrey = Color(0xFFF888888);
+const Kblack = Color(0xFFF000000);
+const Kblue = Color(0xFFF0362FF);
+const Kfadedblue = Color(0xFFFDFEBFF);
+const kwhite = Color(0xFFFFFF);
+const kgreytab = Color(0xFFFF1F1F1);
