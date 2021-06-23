@@ -42,7 +42,7 @@ class InputPage extends StatelessWidget {
           width: double.infinity,
           child: ElevatedButton(
             onPressed: () {
-              Get.to(LoginPage());
+              Get.to(() => LoginPage());
             },
             child: Text(
               "submit",

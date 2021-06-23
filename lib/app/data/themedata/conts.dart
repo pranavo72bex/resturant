@@ -17,6 +17,14 @@ const link = TextStyle(
   fontSize: 24,
 );
 
+//shadow
+
+const boxshadow = BoxShadow(
+  color: Kgrey,
+  blurRadius: 4,
+  offset: Offset(1, 1), // Shadow position
+);
+
 //colors
 const Kgrey = Color(0xFFF888888);
 const Kblack = Color(0xFFF000000);

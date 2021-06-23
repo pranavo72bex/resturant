@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurantsapp/app/data/themedata/conts.dart';
-import 'package:restaurantsapp/app/modules/home/views/home_view.dart';
+import 'package:restaurantsapp/app/modules/home/views/widgets/bottomnaviagationbar.dart';
 
 class SideFloatingBtn extends StatelessWidget {
   const SideFloatingBtn({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class SideFloatingBtn extends StatelessWidget {
             padding:
                 const EdgeInsets.only(left: 30, right: 30, bottom: 5, top: 5),
             child: InkWell(
-              onTap: () => Get.to(HomeView()),
+              onTap: () => Get.to(AppNavigator()),
               child: Text(
                 'Home',
                 style: TextStyle(

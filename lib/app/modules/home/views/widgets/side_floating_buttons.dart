@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/modules/feeds/views/feeds_view.dart';
 import 'package:restaurantsapp/app/modules/near_by/view/near_by_page.dart';
 
 class SideFloatingButtons extends StatelessWidget {
@@ -28,7 +29,9 @@ class SideFloatingButtons extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => FeedsPage());
+                    },
                     child: Text(
                       'Feeds',
                       style: TextStyle(
@@ -73,7 +76,7 @@ class SideFloatingButtons extends StatelessWidget {
                 padding: const EdgeInsets.only(
                     left: 30, right: 30, bottom: 5, top: 5),
                 child: InkWell(
-                  onTap: () => Get.to(NearByPage()),
+                  onTap: () => Get.to(() => NearByPage()),
                   child: Text(
                     'Near By',
                     style: TextStyle(

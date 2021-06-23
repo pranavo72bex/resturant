@@ -58,7 +58,7 @@ class LoginPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Get.to(AppNavigator());
+                      Get.to(() => AppNavigator());
                     },
                     child: Text(
                       "Login",
