@@ -28,8 +28,11 @@ class FeedsPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Expanded(
+            SizedBox(
+              height: 136,
               child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
                 itemBuilder: (context, index) => horizontalSliderimage(),
                 itemCount: 5,
               ),
@@ -42,7 +45,6 @@ class FeedsPage extends StatelessWidget {
 
   Widget horizontalSliderimage() {
     return Container(
-      height: 136,
       width: 80,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
