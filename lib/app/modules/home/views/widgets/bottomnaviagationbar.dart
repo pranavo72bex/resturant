@@ -20,41 +20,49 @@ class _AppNavigatorState extends State<AppNavigator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        type: BottomNavigationBarType.fixed,
-        elevation: 0,
-        iconSize: 20,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(
-            label: "",
-            icon: ImageIcon(
-              AssetImage("assets/icons/home.png"),
-            ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: Colors.grey.shade200,
+            width: 1,
           ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: ImageIcon(
-              AssetImage("assets/icons/shoppingcart.png"),
+        ),
+        child: BottomNavigationBar(
+          backgroundColor: Colors.white,
+          type: BottomNavigationBarType.fixed,
+          elevation: 0,
+          iconSize: 20,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          currentIndex: _currentIndex,
+          items: [
+            BottomNavigationBarItem(
+              label: "",
+              icon: ImageIcon(
+                AssetImage("assets/icons/home.png"),
+              ),
             ),
-          ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: ImageIcon(
-              AssetImage("assets/icons/shoppingbag.png"),
+            BottomNavigationBarItem(
+              label: "",
+              icon: ImageIcon(
+                AssetImage("assets/icons/shoppingcart.png"),
+              ),
             ),
-          ),
-          BottomNavigationBarItem(
-            label: "",
-            icon: ImageIcon(
-              AssetImage("assets/icons/bell.png"),
+            BottomNavigationBarItem(
+              label: "",
+              icon: ImageIcon(
+                AssetImage("assets/icons/shoppingbag.png"),
+              ),
             ),
-          ),
-        ],
-        onTap: (index) => setState(() => _currentIndex = index),
+            BottomNavigationBarItem(
+              label: "",
+              icon: ImageIcon(
+                AssetImage("assets/icons/bell.png"),
+              ),
+            ),
+          ],
+          onTap: (index) => setState(() => _currentIndex = index),
+        ),
       ),
       body: _pages[_currentIndex],
     );

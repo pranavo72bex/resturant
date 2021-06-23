@@ -28,11 +28,13 @@ class NearByPage extends StatelessWidget {
                               children: <Widget>[
                                 Container(
                                   color: kgreytab,
+                                  padding: EdgeInsets.only(bottom: 20),
                                   child: TabBar(
                                     isScrollable: true,
                                     indicatorColor: Colors.grey[400],
                                     labelColor: Kblue,
                                     unselectedLabelColor: Colors.black,
+                                    indicatorPadding: EdgeInsets.all(200),
                                     tabs: [
                                       Tab(text: 'All'),
                                       Tab(text: 'Hotel'),
