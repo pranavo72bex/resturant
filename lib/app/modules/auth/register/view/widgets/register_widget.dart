@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:restaurantsapp/app/data/themedata/conts.dart';
 import 'package:restaurantsapp/app/modules/auth/login/view/login_page.dart';
 
 class InputPage extends StatelessWidget {
@@ -13,14 +13,10 @@ class InputPage extends StatelessWidget {
         TextFormField(
           keyboardType: TextInputType.phone,
           decoration: InputDecoration(
-            suffixIcon: Icon(
-              FontAwesomeIcons.arrowCircleRight,
-              size: 40,
-              color: Colors.blue,
-            ),
+            suffixIcon: customButtonarrow(),
             hintText: "Mobile Number",
             hintStyle: TextStyle(
-              color: Colors.black,
+              color: Kblack,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -33,7 +29,7 @@ class InputPage extends StatelessWidget {
           decoration: InputDecoration(
             hintText: "Enter OTP",
             hintStyle: TextStyle(
-              color: Colors.grey,
+              color: Kgrey,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -57,6 +53,26 @@ class InputPage extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+
+  Widget customButtonarrow() {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        padding: EdgeInsets.all(10),
+        margin: EdgeInsets.all(5),
+        height: 15,
+        width: 15,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: Kblue,
+        ),
+        child: ImageIcon(
+          AssetImage("assets/icons/arrow.png"),
+          color: Colors.white,
+        ),
+      ),
     );
   }
 }

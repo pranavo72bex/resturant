@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:restaurantsapp/app/data/themedata/commonwidgets/commonheard.dart';
 
 class CustomeAppbar extends StatelessWidget {
   const CustomeAppbar({Key? key}) : super(key: key);
@@ -9,7 +7,9 @@ class CustomeAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        ScoooperLin(),
+        Image.asset(
+          "assets/icons/soooperimage.png",
+        ),
         Spacer(),
         IconButton(
           onPressed: () {},

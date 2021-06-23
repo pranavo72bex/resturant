@@ -16,3 +16,8 @@ const link = TextStyle(
   fontWeight: FontWeight.w900,
   fontSize: 24,
 );
+
+//colors
+const Kgrey = Colors.grey;
+const Kblack = Colors.black;
+const Kblue = Colors.blue;
