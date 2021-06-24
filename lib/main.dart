@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'app/data/themedata/theme_data.dart';
+import 'app/modules/my_wallet/view/my_walletpage.dart';
 import 'app/routes/app_pages.dart';
 
 void main() {
@@ -16,9 +17,10 @@ void main() {
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Application",
-      initialRoute: AppPages.INITIAL,
+      //initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
+      home: MywalletPage(),
     ),
   );
 }

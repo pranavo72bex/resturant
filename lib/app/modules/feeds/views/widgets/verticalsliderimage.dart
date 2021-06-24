@@ -28,13 +28,13 @@ class VerticalSliderImage extends StatelessWidget {
           child: ClipRRect(
             child: BackdropFilter(
               filter: ImageFilter.blur(
-                sigmaX: 10.0,
-                sigmaY: 10.0,
+                sigmaX: 8.0,
+                sigmaY: 8.0,
               ),
               child: Container(
                 height: 41,
                 width: 333,
-                color: Colors.black.withOpacity(0.1),
+                color: Colors.black.withOpacity(0.5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

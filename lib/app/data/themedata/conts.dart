@@ -32,3 +32,4 @@ const Kblue = Color(0xFFF0362FF);
 const Kfadedblue = Color(0xFFFDFEBFF);
 const kwhite = Color(0xFFFFFF);
 const kgreytab = Color(0xFFFF1F1F1);
+const kgreybackground = Color(0xFFFF1F1F1);
