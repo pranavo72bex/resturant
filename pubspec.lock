@@ -200,6 +200,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.1"
+  scratcher:
+    dependency: "direct main"
+    description:
+      name: scratcher
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -277,4 +284,4 @@ packages:
     version: "0.2.0"
 sdks:
   dart: ">=2.13.0 <3.0.0"
-  flutter: ">=1.20.0"
+  flutter: ">=2.0.0"
