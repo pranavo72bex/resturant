@@ -22,9 +22,9 @@ class VerticalSliderImage extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: 0,
-          bottom: 0,
-          right: 0,
+          left: 5,
+          bottom: 5,
+          right: 5,
           child: ClipRRect(
             child: BackdropFilter(
               filter: ImageFilter.blur(
@@ -34,13 +34,31 @@ class VerticalSliderImage extends StatelessWidget {
               child: Container(
                 height: 41,
                 width: 333,
-                color: Colors.black.withOpacity(0.8),
+                color: Colors.black.withOpacity(0.1),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text("Like", style: TextStyle(color: Colors.white)),
-                    Text("comment", style: TextStyle(color: Colors.white)),
-                    Text("share", style: TextStyle(color: Colors.white)),
+                    InkWell(
+                      onTap: () {},
+                      child: Text(
+                        "Like",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Text(
+                        "comment",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Text(
+                        "share",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
                   ],
                 ),
               ),
