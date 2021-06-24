@@ -65,6 +65,7 @@ class FeedsPage extends StatelessWidget {
                     ),
                     ListView.builder(
                       shrinkWrap: true,
+                      primary: false,
                       itemBuilder: (context, index) => VerticalSliderImage(),
                       itemCount: 10,
                     ),
