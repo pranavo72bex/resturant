@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:restaurantsapp/app/data/themedata/commonwidgets/customappbar.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/modules/my_wallet/view/widgets/bodycontainer.dart';
 import 'package:restaurantsapp/app/modules/my_wallet/view/widgets/inputtextfield.dart';
 import 'package:restaurantsapp/app/modules/my_wallet/view/widgets/textheader.dart';
 
@@ -21,28 +20,10 @@ class MywalletPage extends StatelessWidget {
             SizedBox(height: 10),
             InputTextfieldmoney(),
             SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text("Transactions History"),
-            ),
-            customContainerText(
-                "You have added to wallet: 1000", kgreybackground),
-            customContainerText("You have paid to Merchant: 675", kwhite),
-            customContainerText(
-                "You have received refund: 295", kgreybackground)
+            BodyContainer(),
           ],
         ),
       ),
-    );
-  }
-
-  Widget customContainerText(String text, dynamic color) {
-    return Container(
-      padding: EdgeInsets.all(8),
-      height: 40,
-      width: double.infinity,
-      color: color,
-      child: Text(text),
     );
   }
 }
