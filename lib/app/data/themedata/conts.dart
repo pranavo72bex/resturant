@@ -34,3 +34,6 @@ const kwhite = Color(0xFFFFFF);
 const kgreytab = Color(0xFFFF1F1F1);
 const kgreybackground = Color(0xFFFF1F1F1);
 const bordercolor = Color(0xFFFBFBFBF);
+const korange = Colors.orange;
+const klime = Colors.lime;
+const kred = Colors.red;
