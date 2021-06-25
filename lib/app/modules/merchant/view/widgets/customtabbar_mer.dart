@@ -74,13 +74,13 @@ class CustomTabbarMerch extends StatelessWidget {
         children: [
           HorizontalCardMerch(),
           SearchbarMerchant(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              "Menu",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.all(8.0),
+          //   child: Text(
+          //     "Menu",
+          //     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          //   ),
+          // ),
           MerchantverticalCard()
         ],
       ),
