@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 import 'app/data/themedata/theme_data.dart';
 
-import 'app/modules/merchant/view/merchant_page.dart';
+import 'app/modules/orders/view/order_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +21,7 @@ Future<void> main() async {
       //initialRoute: AppPages.INITIAL,
       // getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
-      home: MerchantPage(),
+      home: OrderPage(),
     ),
   );
 }
