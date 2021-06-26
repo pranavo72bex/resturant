@@ -19,7 +19,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: "Application",
       //initialRoute: AppPages.INITIAL,
-      getPages: AppPages.routes,
+      // getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
       home: MerchantPage(),
     ),
