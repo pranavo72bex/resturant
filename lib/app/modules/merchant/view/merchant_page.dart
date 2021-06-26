@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:restaurantsapp/app/data/themedata/conts.dart';
 import 'package:restaurantsapp/app/modules/merchant/view/widgets/customappbarmerch.dart';
-import 'package:restaurantsapp/app/modules/merchant/view/widgets/customtabbar_mer.dart';
 import 'package:restaurantsapp/app/modules/merchant/view/widgets/horizontalscroller_container.dart';
 import 'package:restaurantsapp/app/modules/merchant/view/widgets/searchbar.dart';
 import 'package:restaurantsapp/app/modules/merchant/view/widgets/verticalcard_merchat.dart';
@@ -39,18 +39,31 @@ class _MerchantPageState extends State<MerchantPage>
                 ),
               ),
               SliverToBoxAdapter(
-                child: TabBar(
-                  labelColor: Colors.red,
-                  controller: _tabBarController,
-                  tabs: [
-                    Tab(text: 'Takeaway'),
-                    Tab(text: 'Dine in'),
-                    Tab(text: 'Delivery'),
-                    Tab(
-                      text: 'Profile',
-                      icon: Image.asset("assets/icons/Star.png"),
-                    ),
-                  ],
+                child: Container(
+                  margin: EdgeInsets.only(top: 8, bottom: 8),
+                  color: kgreybackground,
+                  child: TabBar(
+                    indicatorColor: Colors.grey,
+                    labelColor: Colors.black,
+                    labelStyle:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                    unselectedLabelColor: Colors.black,
+                    unselectedLabelStyle:
+                        TextStyle(fontWeight: FontWeight.normal),
+                    controller: _tabBarController,
+                    tabs: [
+                      Tab(text: 'Takeaway'),
+                      Tab(text: 'Dine in'),
+                      Tab(text: 'Delivery'),
+                      Row(
+                        children: [
+                          Tab(text: 'Profile'),
+                          SizedBox(width: 5),
+                          Image.asset("assets/icons/Star.png"),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               )
             ];
@@ -63,9 +76,15 @@ class _MerchantPageState extends State<MerchantPage>
                 children: [
                   HorizontalCardMerch(),
                   SearchbarMerchant(),
-                  MerchantverticalCard(),
-                  MerchantverticalCard(),
-                  MerchantverticalCard(),
+                  ListView.builder(
+                    itemCount: 10,
+                    primary: false,
+                    shrinkWrap: true,
+                    itemBuilder: (context, index) => MerchantverticalCard(),
+                  )
+                  // MerchantverticalCard(),
+                  // MerchantverticalCard(),
+                  // MerchantverticalCard(),
                 ],
               ),
               Center(child: Text("Dine in")),
