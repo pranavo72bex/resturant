@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SearchbarMerchant extends StatelessWidget {
   const SearchbarMerchant({Key? key}) : super(key: key);
@@ -25,7 +26,21 @@ class SearchbarMerchant extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.bottomSheet(
+                Container(
+                  height: 200,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(18),
+                      topRight: Radius.circular(18),
+                    ),
+                  ),
+                ),
+              );
+            },
             icon: ImageIcon(
               AssetImage("assets/icons/filter.png"),
             ),

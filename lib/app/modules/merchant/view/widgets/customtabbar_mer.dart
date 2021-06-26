@@ -37,7 +37,7 @@ class CustomTabbarMerch extends StatelessWidget {
                       Row(
                         children: [
                           Tab(text: 'Profile '),
-                          SizedBox(height: 5),
+                          SizedBox(height: 10),
                           Image.asset("assets/icons/Star.png"),
                           Text(
                             "4.9",
