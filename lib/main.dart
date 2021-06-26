@@ -7,9 +7,9 @@ import 'package:get/get.dart';
 import 'app/data/themedata/theme_data.dart';
 
 import 'app/modules/merchant/view/merchant_page.dart';
-import 'app/routes/app_pages.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   LicenseRegistry.addLicense(() async* {
     final license = await rootBundle.loadString('google_fonts/OFL.txt');
     yield LicenseEntryWithLineBreaks(['google_fonts'], license);
