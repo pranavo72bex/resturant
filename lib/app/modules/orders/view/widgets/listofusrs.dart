@@ -6,6 +6,7 @@ class ListofUsers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
+      primary: false,
       shrinkWrap: true,
       itemBuilder: (context, index) => Listofuserwidget(),
       separatorBuilder: (context, index) => Divider(),

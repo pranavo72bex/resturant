@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
+import 'package:restaurantsapp/app/modules/merchant/view/merchant_page.dart';
 
 import 'app/data/themedata/theme_data.dart';
 
@@ -21,7 +22,7 @@ Future<void> main() async {
       //initialRoute: AppPages.INITIAL,
       // getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
-      home: OrderPage(),
+      home: MerchantPage(),
     ),
   );
 }

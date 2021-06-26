@@ -10,81 +10,69 @@ class CustomTabbarMerch extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return DefaultTabController(
+      length: 4,
+      initialIndex: 0,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          DefaultTabController(
-            length: 4,
-            initialIndex: 0,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Container(
-                  color: kgreytab,
-                  padding: EdgeInsets.only(bottom: 10),
-                  child: TabBar(
-                    isScrollable: true,
-                    indicatorColor: Kgrey,
-                    labelColor: Kblue,
-                    labelStyle:
-                        TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                    unselectedLabelColor: Kblack,
-                    tabs: [
-                      Tab(text: 'Takeaway'),
-                      Tab(text: 'Dine in'),
-                      Tab(text: 'Delivery'),
-                      Row(
-                        children: [
-                          Tab(text: 'Profile '),
-                          SizedBox(height: 10),
-                          Image.asset("assets/icons/Star.png"),
-                          Text(
-                            "4.9",
-                            style: TextStyle(fontSize: 10),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 500, //height of TabBarView
-                  child: TabBarView(
-                    children: [
-                      _bodyContainerTakeaway(),
-                      _bodyContainer("Dine in"),
-                      _bodyContainer("Delivery"),
-                      _bodyContainer("Profile"),
-                    ],
-                  ),
+          Container(
+            color: kgreytab,
+            padding: EdgeInsets.only(bottom: 10),
+            child: TabBar(
+              isScrollable: true,
+              indicatorColor: Kgrey,
+              labelColor: Kblue,
+              labelStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              unselectedLabelColor: Kblack,
+              tabs: [
+                Tab(text: 'Takeaway'),
+                Tab(text: 'Dine in'),
+                Tab(text: 'Delivery'),
+                Row(
+                  children: [
+                    Tab(text: 'Profile '),
+                    SizedBox(height: 10),
+                    Image.asset("assets/icons/Star.png"),
+                    Text(
+                      "4.9",
+                      style: TextStyle(fontSize: 10),
+                    )
+                  ],
                 ),
               ],
             ),
+          ),
+          TabBarView(
+            children: [
+              bodyContainerTakeaway(),
+              bodyContainer("Dine in"),
+              bodyContainer("Delivery"),
+              bodyContainer("Profile"),
+            ],
           ),
         ],
       ),
     );
   }
 
-  Widget _bodyContainerTakeaway() {
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          HorizontalCardMerch(),
-          SearchbarMerchant(),
-          MerchantverticalCard()
-        ],
-      ),
+  Widget bodyContainerTakeaway() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        HorizontalCardMerch(),
+        // SearchbarMerchant(),
+        // MerchantverticalCard(),
+        // MerchantverticalCard(),
+        // MerchantverticalCard(),
+      ],
     );
   }
 
-  Widget _bodyContainer(String text) {
-    return Container(
-      child: Center(
-        child: Text(text),
-      ),
+  Widget bodyContainer(String text) {
+    return Center(
+      child: Text(text),
     );
   }
 }
