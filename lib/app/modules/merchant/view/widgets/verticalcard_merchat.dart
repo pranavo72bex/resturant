@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:restaurantsapp/app/data/themedata/conts.dart';
 
@@ -9,55 +10,66 @@ class MerchantverticalCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(border: Border.all(width: 0.3)),
       padding: EdgeInsets.all(8),
-      height: 220,
+      height: 190,
       width: double.infinity,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset("assets/icons/cross.png"),
-                Text(
-                  "Red velvet cake[Double Layer]",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                ),
-                Text("in waffle cake"),
-                Text("₹499.99"),
-                customtextcontainer(),
-                Text(
-                  "long description about the product",
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
-                )
+                BodyTextContainer(),
               ],
             ),
           ),
-          Stack(
+          StackImageContainer(),
+        ],
+      ),
+    );
+  }
+
+  Widget StackImageContainer() {
+    return Stack(
+      children: [
+        Container(
+          margin: EdgeInsets.only(bottom: 15),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(18),
+            child: Image.asset("assets/images/birimage.png"),
+          ),
+        ),
+        Positioned(
+          left: 32,
+          bottom: 1,
+          child: Stack(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                child: Image.asset("assets/images/birimage.png"),
-              ),
-              Positioned(
-                left: 32,
-                bottom: 2,
+              InkWell(
+                onTap: () {},
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.red,
+                    color: korange,
                     borderRadius: BorderRadius.circular(15),
                   ),
                   height: 40,
                   width: 80,
+                  child: Center(
+                    child: Text(
+                      "ADD",
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ),
+              ),
+              Positioned(
+                right: 3,
+                top: 5,
+                child: Image.asset("assets/icons/add.png"),
               )
             ],
-          )
-        ],
-      ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -72,6 +84,27 @@ class MerchantverticalCard extends StatelessWidget {
         "Bestseller",
         style: TextStyle(color: korange),
       ),
+    );
+  }
+
+  Widget BodyTextContainer() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Image.asset("assets/icons/cross.png"),
+        Text(
+          "Red velvet cake[Double Layer]",
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        ),
+        Text("in waffle cake"),
+        Text("₹499.99"),
+        customtextcontainer(),
+        Text(
+          "long description about the product",
+          overflow: TextOverflow.ellipsis,
+          maxLines: 2,
+        )
+      ],
     );
   }
 }
