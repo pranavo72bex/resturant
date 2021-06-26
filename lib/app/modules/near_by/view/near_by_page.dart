@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:restaurantsapp/app/data/themedata/commonwidgets/customappbar.dart';
 import 'package:restaurantsapp/app/modules/near_by/view/widgets/custom_topbar.dart';
-import 'package:restaurantsapp/app/modules/near_by/view/widgets/side_floating_button.dart';
+import 'package:restaurantsapp/app/data/themedata/commonwidgets/side_floating_button.dart';
 
 class NearByPage extends StatelessWidget {
   const NearByPage({Key? key}) : super(key: key);

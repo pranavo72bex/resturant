@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurantsapp/app/data/themedata/commonwidgets/side_floating_button.dart';
 import 'package:restaurantsapp/app/data/themedata/conts.dart';
 import 'package:restaurantsapp/app/modules/orders/view/widgets/customapp.dart';
 import 'package:restaurantsapp/app/modules/orders/view/widgets/listofusrs.dart';
@@ -11,15 +12,20 @@ class OrderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              CustomApp(),
-              CustomSearch(),
-              bodytext(),
-              ListofUsers(),
-            ],
-          ),
+        child: Stack(
+          children: [
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  CustomApp(),
+                  CustomSearch(),
+                  bodytext(),
+                  ListofUsers(),
+                ],
+              ),
+            ),
+            SideFloatingBtn()
+          ],
         ),
       ),
     );

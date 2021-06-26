@@ -17,7 +17,6 @@ class ListofUsers extends StatelessWidget {
     return ListTile(
       dense: true,
       horizontalTitleGap: 2,
-      minLeadingWidth: 25.0,
       minVerticalPadding: 0,
       leading: CircleAvatar(
         radius: 28,
