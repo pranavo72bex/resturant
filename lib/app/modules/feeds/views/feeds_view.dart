@@ -1,9 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:restaurantsapp/app/data/commonwidgets/custom_app_bar.dart';
 import 'package:restaurantsapp/app/data/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/feeds/views/widgets/horizotalsliderimage.dart';
 import 'package:restaurantsapp/app/modules/feeds/views/widgets/sidefloatingbtn.dart';
 import 'package:restaurantsapp/app/modules/feeds/views/widgets/verticalsliderimage.dart';
+import 'package:restaurantsapp/app/modules/orders/view/widgets/customapp.dart';
 
 class FeedsPage extends StatelessWidget {
   const FeedsPage({Key? key}) : super(key: key);
@@ -11,38 +13,7 @@ class FeedsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Image.asset(soooperimg),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: ImageIcon(
-              AssetImage(
-                usrimg,
-              ),
-              color: Colors.black,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: ImageIcon(
-              AssetImage(
-                qrcodeimg,
-              ),
-              color: Colors.black,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: ImageIcon(
-              AssetImage(
-                messageimg,
-              ),
-              color: Colors.black,
-            ),
-          )
-        ],
-      ),
+      appBar: CustomAppBar(),
       body: SafeArea(
         child: Stack(
           children: [
