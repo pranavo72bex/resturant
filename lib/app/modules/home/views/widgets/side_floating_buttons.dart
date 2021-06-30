@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
 import 'package:restaurantsapp/app/modules/feeds/views/feeds_view.dart';
 import 'package:restaurantsapp/app/modules/near_by/view/near_by_page.dart';
+
+import 'home_buttomcard.dart';
 
 class SideFloatingButtons extends StatelessWidget {
   const SideFloatingButtons({Key? key}) : super(key: key);
@@ -16,6 +18,8 @@ class SideFloatingButtons extends StatelessWidget {
           RotatedBox(
             quarterTurns: -1,
             child: Container(
+              height: 34,
+              width: 275,
               decoration: BoxDecoration(
                 color: Colors.grey[100],
                 borderRadius: BorderRadiusDirectional.only(
@@ -30,13 +34,16 @@ class SideFloatingButtons extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Get.to(() => FeedsPage());
+                      Get.offAll(
+                        () => FeedsPage(),
+                      );
                     },
                     child: Text(
                       'Feeds',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
+                        fontSize: 15,
                       ),
                     ),
                     style: TextButton.styleFrom(
@@ -44,17 +51,21 @@ class SideFloatingButtons extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.bottomSheet(
+                        HomeButtomCard(),
+                      );
+                    },
                     child: Text(
                       'Offers',
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
                       'New products',
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(color: Colors.black, fontSize: 15),
                     ),
                   ),
                 ],
@@ -65,6 +76,8 @@ class SideFloatingButtons extends StatelessWidget {
           RotatedBox(
             quarterTurns: 1,
             child: Container(
+              height: 30,
+              width: 132,
               decoration: BoxDecoration(
                 color: Colors.grey[100],
                 borderRadius: BorderRadiusDirectional.only(
@@ -76,12 +89,16 @@ class SideFloatingButtons extends StatelessWidget {
                 padding: const EdgeInsets.only(
                     left: 30, right: 30, bottom: 5, top: 5),
                 child: InkWell(
-                  onTap: () => Get.to(() => NearByPage()),
-                  child: Text(
-                    'Near By',
-                    style: TextStyle(
-                      color: Kblack,
-                      fontWeight: FontWeight.bold,
+                  onTap: () => Get.offAll(
+                    () => NearByPage(),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Near By',
+                      style: TextStyle(
+                        color: Kblack,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),

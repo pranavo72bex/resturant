@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/data/constants/conts.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/auth/register/view/register_view.dart';
 
 class OnboardingScreens extends StatelessWidget {
@@ -20,7 +22,7 @@ class OnboardingScreens extends StatelessWidget {
               top: 30,
             ),
             child: Image.asset(
-              "assets/icons/soooperimage.png",
+              soooperimg,
             ),
           ),
           Padding(
@@ -58,13 +60,17 @@ class OnboardingScreens extends StatelessWidget {
 
   Widget _cutombuttons() {
     return Container(
+      height: 64,
+      width: 64,
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: Kblue,
       ),
       child: ImageIcon(
-        AssetImage("assets/icons/onboardingarrow.png"),
+        AssetImage(
+          onboardingarrowimg,
+        ),
         color: Colors.white,
         size: 25,
       ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/commonwidgets/customappbar.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({Key? key}) : super(key: key);
@@ -12,7 +11,6 @@ class NotificationPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomeAppbar(),
             SizedBox(height: 10),
             Container(
               padding: EdgeInsets.all(8),

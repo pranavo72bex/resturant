@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 
 class CustomApp extends StatelessWidget {
   const CustomApp({Key? key}) : super(key: key);
@@ -13,13 +14,13 @@ class CustomApp extends StatelessWidget {
           InkWell(
             onTap: () {},
             child: Image.asset(
-              "assets/icons/soooperimage.png",
+              soooperimg,
             ),
           ),
           InkWell(
             onTap: () {},
             child: Image.asset(
-              "assets/icons/editpen.png",
+              editpenimg,
             ),
           ),
         ],

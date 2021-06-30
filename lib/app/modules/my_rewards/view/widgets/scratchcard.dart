@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/data/constants/conts.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 import 'package:scratcher/widgets.dart';
 
 class ScratchCard extends StatelessWidget {
@@ -11,7 +13,9 @@ class ScratchCard extends StatelessWidget {
       accuracy: ScratchAccuracy.low,
       brushSize: 40,
       color: Kblue,
-      image: Image.asset("assets/icons/rewardbackground.png"),
+      image: Image.asset(
+        rewardimg,
+      ),
       child: Container(
         padding: EdgeInsets.all(8),
         height: 160,
@@ -46,7 +50,9 @@ class ScratchCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                Image.asset("assets/icons/banerstar.png")
+                Image.asset(
+                  banerstarimg,
+                )
               ],
             )
           ],

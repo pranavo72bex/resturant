@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 
 class CustomSearch extends StatelessWidget {
   const CustomSearch({Key? key}) : super(key: key);
@@ -11,7 +12,9 @@ class CustomSearch extends StatelessWidget {
         decoration: InputDecoration(
           hintText: "Search",
           suffixIcon: ImageIcon(
-            AssetImage("assets/icons/search.png"),
+            AssetImage(
+              searchimg,
+            ),
           ),
         ),
       ),

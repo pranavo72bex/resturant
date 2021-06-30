@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/data/constants/conts.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 
 class CustomTopBar extends StatelessWidget {
   const CustomTopBar({Key? key}) : super(key: key);
@@ -115,7 +117,9 @@ class CustomTopBar extends StatelessWidget {
         Positioned(
           right: 10,
           top: 10,
-          child: Image.asset("assets/icons/add.png"),
+          child: Image.asset(
+            addimg,
+          ),
         )
       ],
     );

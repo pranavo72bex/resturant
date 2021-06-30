@@ -3,16 +3,16 @@ import 'package:get/get.dart';
 import 'package:restaurantsapp/app/data/constants/color_const.dart';
 import 'package:restaurantsapp/app/modules/home/views/widgets/bottomnaviagationbar.dart';
 
-class FloatingSidebutton extends StatelessWidget {
-  const FloatingSidebutton({Key? key}) : super(key: key);
+class SideFloatingBtn extends StatelessWidget {
+  const SideFloatingBtn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      right: 0,
-      top: 280,
+      left: 0,
+      top: 250,
       child: RotatedBox(
-        quarterTurns: 1,
+        quarterTurns: -1,
         child: Container(
           decoration: BoxDecoration(
             color: Colors.grey[100],
@@ -25,7 +25,9 @@ class FloatingSidebutton extends StatelessWidget {
             padding:
                 const EdgeInsets.only(left: 30, right: 30, bottom: 5, top: 5),
             child: InkWell(
-              onTap: () => Get.offAll(AppNavigator()),
+              onTap: () => Get.offAll(
+                AppNavigator(),
+              ),
               child: Text(
                 'Home',
                 style: TextStyle(
@@ -38,6 +40,5 @@ class FloatingSidebutton extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

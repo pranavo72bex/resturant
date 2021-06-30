@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/commonwidgets/side_floating_button.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/commonwidgets/side_floating_button.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
 import 'package:restaurantsapp/app/modules/orders/view/widgets/customapp.dart';
 import 'package:restaurantsapp/app/modules/orders/view/widgets/listofusrs.dart';
 import 'package:restaurantsapp/app/modules/orders/view/widgets/searchbar.dart';

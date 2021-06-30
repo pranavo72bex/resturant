@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/merchant/view/widgets/customappbarmerch.dart';
 import 'package:restaurantsapp/app/modules/merchant/view/widgets/horizontalscroller_container.dart';
 import 'package:restaurantsapp/app/modules/merchant/view/widgets/searchbar.dart';
@@ -59,7 +60,9 @@ class _MerchantPageState extends State<MerchantPage>
                         children: [
                           Tab(text: 'Profile'),
                           SizedBox(width: 5),
-                          Image.asset("assets/icons/Star.png"),
+                          Image.asset(
+                            Starimg,
+                          ),
                         ],
                       ),
                     ],
@@ -82,9 +85,6 @@ class _MerchantPageState extends State<MerchantPage>
                     shrinkWrap: true,
                     itemBuilder: (context, index) => MerchantverticalCard(),
                   )
-                  // MerchantverticalCard(),
-                  // MerchantverticalCard(),
-                  // MerchantverticalCard(),
                 ],
               ),
               Center(child: Text("Dine in")),

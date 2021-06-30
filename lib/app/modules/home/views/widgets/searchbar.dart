@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 
 class SearchBar extends StatelessWidget {
   const SearchBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      decoration: InputDecoration(
+    return Container(
+      height: 40,
+      width: 327,
+      child: TextFormField(
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.only(left: 11),
           hintText: "Hello,Rohan Good Morning !!!",
-          suffixIcon: ImageIcon(AssetImage("assets/icons/search.png"))),
+          suffixIcon: ImageIcon(
+            AssetImage(
+              searchimg,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/auth/login/view/login_page.dart';
 
 class InputPage extends StatelessWidget {
@@ -10,32 +11,42 @@ class InputPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TextFormField(
-          keyboardType: TextInputType.phone,
-          decoration: InputDecoration(
-            suffixIcon: customButtonarrow(),
-            hintText: "Mobile Number",
-            hintStyle: TextStyle(
-              color: Kblack,
-              fontWeight: FontWeight.bold,
+        Container(
+          height: 55,
+          width: 309,
+          child: TextFormField(
+            keyboardType: TextInputType.phone,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.only(left: 38),
+              suffixIcon: customButtonarrow(),
+              hintText: "Mobile Number",
+              hintStyle: TextStyle(
+                color: Kblack,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 10,
         ),
-        TextFormField(
-          keyboardType: TextInputType.number,
-          decoration: InputDecoration(
-            hintText: "Enter OTP",
-            hintStyle: TextStyle(
-              color: Kgrey,
-              fontWeight: FontWeight.bold,
+        Container(
+          height: 55,
+          width: 309,
+          child: TextFormField(
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.only(left: 38),
+              hintText: "Enter OTP",
+              hintStyle: TextStyle(
+                color: Kgrey,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 10,
         ),
         SizedBox(
           height: 50,
@@ -69,7 +80,7 @@ class InputPage extends StatelessWidget {
           color: Kblue,
         ),
         child: ImageIcon(
-          AssetImage("assets/icons/arrow.png"),
+          AssetImage(arrowimg),
           color: Colors.white,
         ),
       ),

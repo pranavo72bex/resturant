@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
 import 'package:restaurantsapp/app/modules/users_profile/view/widgets/roundedurs.dart';
 import '../detailusers.dart';
 

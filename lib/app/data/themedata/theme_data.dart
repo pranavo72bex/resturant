@@ -14,12 +14,17 @@ class Apptheme {
         ),
       ),
     ),
+    appBarTheme: const AppBarTheme().copyWith(
+      centerTitle: false,
+      color: Colors.white,
+      elevation: 0,
+    ),
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
     accentColor: Colors.white,
     fontFamily: GoogleFonts.poppins().fontFamily,
     inputDecorationTheme: InputDecorationTheme(
-      contentPadding: const EdgeInsets.all(16),
+      contentPadding: const EdgeInsets.all(8),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30),
         borderSide: BorderSide(width: 1),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/conts.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/near_by/view/widgets/header_text.dart';
 
 class TabControllerBody extends StatelessWidget {
@@ -70,7 +71,9 @@ class TabControllerBody extends StatelessWidget {
         Positioned(
           right: 10,
           top: 10,
-          child: Image.asset("assets/icons/add.png"),
+          child: Image.asset(
+            addimg,
+          ),
         )
       ],
     );

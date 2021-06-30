@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/conts.dart';
 
 class HorizontalCardMerch extends StatelessWidget {
   const HorizontalCardMerch({Key? key}) : super(key: key);
@@ -19,21 +19,21 @@ class HorizontalCardMerch extends StatelessWidget {
 
   Widget _CustomContainer() {
     return Container(
-      margin: EdgeInsets.all(5),
-      width: 120,
-      padding: EdgeInsets.all(5),
-      decoration: BoxDecoration(
-        border: Border.all(width: 5, color: Kblue.withOpacity(0.5)),
-        borderRadius: BorderRadius.circular(18),
-      ),
-      child: Center(
-        child: Text(
+      child: Container(
+        margin: EdgeInsets.all(4),
+        padding: EdgeInsets.all(3),
+        width: 120,
+        child: Center(
+            child: Text(
           "Free Home Delivery on order above 3000",
           overflow: TextOverflow.ellipsis,
           maxLines: 2,
           style: TextStyle(fontSize: 10),
-        ),
+        )),
+        decoration: kInnerDecoration,
       ),
+      height: 66.0,
+      decoration: kGradientBoxDecoration,
     );
   }
 }

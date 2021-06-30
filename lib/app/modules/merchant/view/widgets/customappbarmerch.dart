@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/conts.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 
 class CustomappbarMerch extends StatelessWidget {
   const CustomappbarMerch({Key? key}) : super(key: key);
@@ -42,13 +43,17 @@ class CustomappbarMerch extends StatelessWidget {
         IconButton(
           onPressed: () {},
           icon: ImageIcon(
-            AssetImage("assets/icons/shoppingcart.png"),
+            AssetImage(
+              shoppingcartimg,
+            ),
           ),
         ),
         IconButton(
           onPressed: () {},
           icon: ImageIcon(
-            AssetImage("assets/icons/flag.png"),
+            AssetImage(
+              flagimg,
+            ),
           ),
         )
       ],

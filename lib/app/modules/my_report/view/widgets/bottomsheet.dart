@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 
 // ignore: must_be_immutable
 class CustomBottomSheet extends StatelessWidget {
@@ -28,9 +29,13 @@ class CustomBottomSheet extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  () => Get.back();
+                  Get.back();
                 },
-                child: Image.asset("assets/icons/cross.png"),
+                child: Image.asset(
+                  crossimg,
+                  height: 20,
+                  width: 20,
+                ),
               )
             ],
           ),

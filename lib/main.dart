@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/modules/merchant/view/merchant_page.dart';
 
 import 'app/data/themedata/theme_data.dart';
 
-import 'app/modules/orders/view/order_screen.dart';
+import 'app/modules/onboarding_screen/view/onboarding_screen.dart';
+import 'app/routes/app_pages.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,10 +19,9 @@ Future<void> main() async {
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Application",
-      //initialRoute: AppPages.INITIAL,
-      // getPages: AppPages.routes,
+      getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
-      home: MerchantPage(),
+      home: OnboardingScreens(),
     ),
   );
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/commonwidgets/customappbar.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/users_profile/view/widgets/privacyandpolicy.dart';
 import 'package:restaurantsapp/app/modules/users_profile/view/widgets/roundedurs.dart';
 
@@ -10,10 +10,41 @@ class DetailsUsers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Image.asset(soooperimg),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: ImageIcon(
+              AssetImage(
+                usrimg,
+              ),
+              color: Colors.black,
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: ImageIcon(
+              AssetImage(
+                qrcodeimg,
+              ),
+              color: Colors.black,
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: ImageIcon(
+              AssetImage(
+                messageimg,
+              ),
+              color: Colors.black,
+            ),
+          )
+        ],
+      ),
       body: SafeArea(
         child: Column(
           children: [
-            CustomeAppbar(),
             Container(
               height: 72,
               width: double.infinity,
@@ -30,7 +61,7 @@ class DetailsUsers extends StatelessWidget {
                   SizedBox(width: 10),
                   InkWell(
                     child: Image.asset(
-                      "assets/icons/editpen.png",
+                      editpenimg,
                     ),
                   ),
                 ],
@@ -47,7 +78,7 @@ class DetailsUsers extends StatelessWidget {
                   InkWell(
                     onTap: () {},
                     child: Image.asset(
-                      "assets/icons/editpen.png",
+                      editpenimg,
                     ),
                   ),
                 ],
@@ -69,7 +100,7 @@ class DetailsUsers extends StatelessWidget {
                   InkWell(
                     onTap: () {},
                     child: Image.asset(
-                      "assets/icons/editpen.png",
+                      editpenimg,
                     ),
                   ),
                 ],
@@ -90,7 +121,7 @@ class DetailsUsers extends StatelessWidget {
                   InkWell(
                     onTap: () {},
                     child: Image.asset(
-                      "assets/icons/editpen.png",
+                      editpenimg,
                     ),
                   ),
                 ],
@@ -152,7 +183,7 @@ class DetailsUsers extends StatelessWidget {
                   InkWell(
                     onTap: () {},
                     child: Image.asset(
-                      "assets/icons/editpen.png",
+                      editpenimg,
                     ),
                   ),
                 ],
@@ -182,7 +213,7 @@ class DetailsUsers extends StatelessWidget {
                   InkWell(
                     onTap: () {},
                     child: Image.asset(
-                      "assets/icons/editpen.png",
+                      editpenimg,
                     ),
                   ),
                 ],

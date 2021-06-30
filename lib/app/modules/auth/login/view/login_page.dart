@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/home/views/widgets/bottomnaviagationbar.dart';
 
 class LoginPage extends StatelessWidget {
@@ -10,55 +11,61 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 8, right: 8, top: 40),
-          child: SafeArea(
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 32, right: 31, top: 100),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  "assets/icons/soooperimage.png",
-                ),
+                Image.asset(soooperimg),
                 SizedBox(
-                  height: 20,
+                  height: 83,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Text("Enter your Name &  Email ID"),
-                ),
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    hintText: "Name",
-                    hintStyle: TextStyle(
-                      color: Kgrey,
-                      fontWeight: FontWeight.bold,
+                Text("Enter your Name &  Email ID"),
+                SizedBox(height: 30),
+                Container(
+                  height: 55,
+                  width: 310.5,
+                  child: TextFormField(
+                    keyboardType: TextInputType.name,
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 36),
+                      hintText: "Name",
+                      hintStyle: TextStyle(
+                        color: Kgrey,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                    hintText: "Email ID",
-                    hintStyle: TextStyle(
-                      color: Kgrey,
-                      fontWeight: FontWeight.bold,
+                Container(
+                  height: 55,
+                  width: 310,
+                  child: TextFormField(
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 36),
+                      hintText: "Email ID",
+                      hintStyle: TextStyle(
+                        color: Kgrey,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
-                SizedBox(
-                  height: 50,
-                  width: double.infinity,
+                Container(
+                  height: 48,
+                  width: 311.5,
                   child: ElevatedButton(
                     onPressed: () {
-                      Get.to(() => AppNavigator());
+                      Get.offAll(() => AppNavigator());
                     },
                     child: Text(
                       "Login",

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
 
 class SearchbarMerchant extends StatelessWidget {
   const SearchbarMerchant({Key? key}) : super(key: key);
@@ -11,18 +12,27 @@ class SearchbarMerchant extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: TextFormField(
-              decoration: InputDecoration(
+            child: Container(
+              height: 40,
+              child: TextFormField(
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.only(left: 12),
                   suffixIcon: ImageIcon(
-                    AssetImage("assets/icons/search.png"),
+                    AssetImage(
+                      searchimg,
+                    ),
                   ),
-                  hintText: "Search"),
+                  hintText: "Search",
+                ),
+              ),
             ),
           ),
           IconButton(
             onPressed: () {},
             icon: ImageIcon(
-              AssetImage("assets/icons/Category.png"),
+              AssetImage(
+                Categoryimg,
+              ),
             ),
           ),
           IconButton(
@@ -42,7 +52,9 @@ class SearchbarMerchant extends StatelessWidget {
               );
             },
             icon: ImageIcon(
-              AssetImage("assets/icons/filter.png"),
+              AssetImage(
+                filterimg,
+              ),
             ),
           ),
         ],

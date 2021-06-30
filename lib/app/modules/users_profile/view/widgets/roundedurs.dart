@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/themedata/conts.dart';
+import 'package:restaurantsapp/app/data/constants/color_const.dart';
 
 class RoundedUsers extends StatelessWidget {
   const RoundedUsers({Key? key}) : super(key: key);

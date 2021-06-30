@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:restaurantsapp/app/data/constants/image_const.dart';
+import 'package:restaurantsapp/app/modules/all_order/view/all_orderpage.dart';
 import 'package:restaurantsapp/app/modules/home/views/home_view.dart';
+import 'package:restaurantsapp/app/modules/merchant/view/merchant_page.dart';
 import 'package:restaurantsapp/app/modules/notification/notification_page.dart';
-import 'package:restaurantsapp/app/modules/shopping_bag.dart/shopping_bag_pag.dart';
-import 'package:restaurantsapp/app/modules/shopping_cart.dart/view/shopping_page.dart';
 
 class AppNavigator extends StatefulWidget {
   @override
@@ -13,13 +14,45 @@ class _AppNavigatorState extends State<AppNavigator> {
   int _currentIndex = 0;
   List<Widget> _pages = [
     HomeView(),
-    ShoppingCart(),
-    ShoppingBagePage(),
+    AllOrder(),
+    MerchantPage(),
     NotificationPage(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Image.asset(soooperimg),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: ImageIcon(
+              AssetImage(
+                usrimg,
+              ),
+              color: Colors.black,
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: ImageIcon(
+              AssetImage(
+                qrcodeimg,
+              ),
+              color: Colors.black,
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: ImageIcon(
+              AssetImage(
+                messageimg,
+              ),
+              color: Colors.black,
+            ),
+          )
+        ],
+      ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           border: Border.all(
