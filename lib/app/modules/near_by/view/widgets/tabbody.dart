@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/constants/conts.dart';
-import 'package:restaurantsapp/app/data/constants/image_const.dart';
+import 'package:restaurantsapp/app/core/constants/conts.dart';
+import 'package:restaurantsapp/app/core/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/near_by/view/widgets/header_text.dart';
 
 class TabControllerBody extends StatelessWidget {
@@ -65,7 +65,9 @@ class TabControllerBody extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.white,
-            boxShadow: [boxshadow],
+            boxShadow: [
+              boxshadow,
+            ],
           ),
         ),
         Positioned(

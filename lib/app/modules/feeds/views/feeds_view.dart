@@ -1,11 +1,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/commonwidgets/custom_app_bar.dart';
-import 'package:restaurantsapp/app/data/constants/image_const.dart';
+import 'package:restaurantsapp/app/core/commonwidgets/custom_app_bar.dart';
 import 'package:restaurantsapp/app/modules/feeds/views/widgets/horizotalsliderimage.dart';
 import 'package:restaurantsapp/app/modules/feeds/views/widgets/sidefloatingbtn.dart';
 import 'package:restaurantsapp/app/modules/feeds/views/widgets/verticalsliderimage.dart';
-import 'package:restaurantsapp/app/modules/orders/view/widgets/customapp.dart';
 
 class FeedsPage extends StatelessWidget {
   const FeedsPage({Key? key}) : super(key: key);

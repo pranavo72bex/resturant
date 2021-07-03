@@ -22,3 +22,12 @@ const String bottomsheetimg = "assets/icons/bsimg.png";
 const String socialimage = "assets/icons/socialimg.png";
 const String vegimg = "assets/icons/veg.png";
 const String bottomsheetstarimg = "assets/icons/bbstar.png";
+
+//internet download images
+const String googlepay = "assets/images/googlepay.png";
+const String amazonpay = "assets/images/amazonpay.png";
+const String phonepay = "assets/images/phonpay.jpg";
+const String shop = "assets/images/shop.png";
+const String googlemapindiacator = "assets/images/googlmapind.jpg";
+const String mobicon = "assets/images/mobicon.jpg";
+const String freeicon = "assets/images/freicon.jpg";

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/constants/conts.dart';
-import 'package:restaurantsapp/app/data/constants/image_const.dart';
+import 'package:restaurantsapp/app/core/constants/conts.dart';
+import 'package:restaurantsapp/app/core/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/auth/register/view/widgets/register_widget.dart';
 
 class RegisterPage extends StatelessWidget {

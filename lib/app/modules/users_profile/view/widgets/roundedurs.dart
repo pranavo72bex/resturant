@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
 
 class RoundedUsers extends StatelessWidget {
   const RoundedUsers({Key? key}) : super(key: key);
@@ -17,7 +17,10 @@ class RoundedUsers extends StatelessWidget {
         child: Text(
           "RP",
           style: TextStyle(
-              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
         ),
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/commonwidgets/side_floating_button.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
-import 'package:restaurantsapp/app/data/constants/image_const.dart';
+import 'package:restaurantsapp/app/core/commonwidgets/custom_app_bar.dart';
+import 'package:restaurantsapp/app/core/commonwidgets/side_floating_button.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/modules/users_profile/view/widgets/headertext.dart';
 import 'package:restaurantsapp/app/modules/users_profile/view/widgets/privacyandpolicy.dart';
 
@@ -11,38 +11,7 @@ class UsersInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Image.asset(soooperimg),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: ImageIcon(
-              AssetImage(
-                usrimg,
-              ),
-              color: Colors.black,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: ImageIcon(
-              AssetImage(
-                qrcodeimg,
-              ),
-              color: Colors.black,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: ImageIcon(
-              AssetImage(
-                messageimg,
-              ),
-              color: Colors.black,
-            ),
-          )
-        ],
-      ),
+      appBar: CustomAppBar(),
       body: SafeArea(
         child: Stack(
           children: [

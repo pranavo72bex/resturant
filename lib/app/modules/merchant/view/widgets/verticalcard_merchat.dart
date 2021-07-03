@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
-import 'package:restaurantsapp/app/data/constants/image_const.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/constants/image_const.dart';
 
 class MerchantverticalCard extends StatelessWidget {
   const MerchantverticalCard({Key? key}) : super(key: key);

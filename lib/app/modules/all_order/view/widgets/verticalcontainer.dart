@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/modules/all_order/view/widgets/horizontal_time.dart';
 import 'package:restaurantsapp/app/modules/all_order/view/widgets/horizontal_timeline.dart';
 

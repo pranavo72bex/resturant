@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
 
 class CutomIndicator extends StatelessWidget {
   const CutomIndicator({Key? key}) : super(key: key);
@@ -9,9 +9,9 @@ class CutomIndicator extends StatelessWidget {
     return Column(
       children: [
         CustomIndicator("Restaurant", Kblue, kwhite),
-        CustomIndicator("Grocery", korange, kwhite),
+        CustomIndicator("Grocery", korange, kgreybackground),
         CustomIndicator("Medicines", kred, kwhite),
-        CustomIndicator("Bakery", klime, kwhite),
+        CustomIndicator("Bakery", klime, kgreybackground),
       ],
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
-import 'package:restaurantsapp/app/data/constants/image_const.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/my_report/view/myreport_page.dart';
 import 'package:restaurantsapp/app/modules/my_rewards/view/my_rewardspage.dart';
 import 'package:restaurantsapp/app/modules/my_wallet/view/my_walletpage.dart';
@@ -33,25 +33,25 @@ class HomeButtomCard extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  Get.offAll(MywalletPage());
+                  Get.to(MywalletPage());
                 },
                 child: CustomButtons("Wallet"),
               ),
               InkWell(
                 onTap: () {
-                  Get.offAll(MyRewards());
+                  Get.to(MyRewards());
                 },
                 child: CustomButtons("Rewards"),
               ),
               InkWell(
                 onTap: () {
-                  Get.offAll(() => UsersInfo());
+                  Get.to(() => UsersInfo());
                 },
                 child: CustomButtons("User Info"),
               ),
               InkWell(
                 onTap: () {
-                  Get.offAll(MyReportPage());
+                  Get.to(MyReportPage());
                 },
                 child: CustomButtons("Reports"),
               ),

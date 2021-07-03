@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
-import 'package:restaurantsapp/app/data/constants/image_const.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/constants/image_const.dart';
+import 'package:restaurantsapp/app/modules/auth/login/controller/validatorController.dart';
 import 'package:restaurantsapp/app/modules/home/views/widgets/bottomnaviagationbar.dart';
+
+LoginValidatorController loginValidatorController =
+    Get.put(LoginValidatorController());
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -14,68 +18,78 @@ class LoginPage extends StatelessWidget {
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.only(left: 32, right: 31, top: 100),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image.asset(soooperimg),
-                SizedBox(
-                  height: 83,
-                ),
-                Text("Enter your Name &  Email ID"),
-                SizedBox(height: 30),
-                Container(
-                  height: 55,
-                  width: 310.5,
-                  child: TextFormField(
-                    keyboardType: TextInputType.name,
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 36),
-                      hintText: "Name",
-                      hintStyle: TextStyle(
-                        color: Kgrey,
-                        fontWeight: FontWeight.bold,
+            child: Form(
+              key: loginValidatorController.loginFormKey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Image.asset(soooperimg),
+                  SizedBox(
+                    height: 83,
+                  ),
+                  Text("Enter your Name &  Email ID"),
+                  SizedBox(height: 10),
+                  Container(
+                    width: 310.5,
+                    child: TextFormField(
+                      keyboardType: TextInputType.name,
+                      decoration: InputDecoration(
+                        hintText: "Name",
+                        hintStyle: TextStyle(
+                          color: Kgrey,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 55,
-                  width: 310,
-                  child: TextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.only(left: 36),
-                      hintText: "Email ID",
-                      hintStyle: TextStyle(
-                        color: Kgrey,
-                        fontWeight: FontWeight.bold,
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    width: 310,
+                    child: TextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        hintText: "Email ID",
+                        hintStyle: TextStyle(
+                          color: Kgrey,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      controller: loginValidatorController.emailController,
+                      onSaved: (value) {
+                        loginValidatorController.email != value;
+                      },
+                      validator: (value) {
+                        return loginValidatorController.ValidateEmail(value!);
+                      },
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 48,
-                  width: 311.5,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Get.offAll(() => AppNavigator());
-                    },
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    height: 48,
+                    width: 311.5,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        loginValidatorController.checkLogin();
+                        if (loginValidatorController.loginFormKey.currentState!
+                            .validate()) {
+                          Get.offAll(() => AppNavigator());
+                        }
+                      },
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ),

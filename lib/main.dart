@@ -3,25 +3,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
-
-import 'app/data/themedata/theme_data.dart';
-
-import 'app/modules/onboarding_screen/view/onboarding_screen.dart';
+import 'app/core/themedata/theme_data.dart';
+import 'app/modules/my_report/view/myreport_page.dart';
 import 'app/routes/app_pages.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  LicenseRegistry.addLicense(() async* {
-    final license = await rootBundle.loadString('google_fonts/OFL.txt');
-    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
-  });
+  LicenseRegistry.addLicense(
+    () async* {
+      final license = await rootBundle.loadString('google_fonts/OFL.txt');
+      yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+    },
+  );
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Application",
       getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
-      home: OnboardingScreens(),
+      home: MyReportPage(),
     ),
   );
 }

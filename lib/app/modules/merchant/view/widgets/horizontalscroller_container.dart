@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/constants/conts.dart';
+import 'package:restaurantsapp/app/core/constants/conts.dart';
 
 class HorizontalCardMerch extends StatelessWidget {
   const HorizontalCardMerch({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/modules/feeds/views/feeds_view.dart';
 import 'package:restaurantsapp/app/modules/near_by/view/near_by_page.dart';
 
@@ -34,7 +34,7 @@ class SideFloatingButtons extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Get.offAll(
+                      Get.to(
                         () => FeedsPage(),
                       );
                     },
@@ -89,7 +89,7 @@ class SideFloatingButtons extends StatelessWidget {
                 padding: const EdgeInsets.only(
                     left: 30, right: 30, bottom: 5, top: 5),
                 child: InkWell(
-                  onTap: () => Get.offAll(
+                  onTap: () => Get.to(
                     () => NearByPage(),
                   ),
                   child: Center(

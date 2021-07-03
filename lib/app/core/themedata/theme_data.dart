@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
 
 class Apptheme {
   final defaultheme = ThemeData(
@@ -21,12 +22,13 @@ class Apptheme {
     ),
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
-    accentColor: Colors.white,
+    accentColor: Kblue,
     fontFamily: GoogleFonts.poppins().fontFamily,
     inputDecorationTheme: InputDecorationTheme(
-      contentPadding: const EdgeInsets.all(8),
+      isDense: true,
+      contentPadding: EdgeInsets.fromLTRB(38, 10, 0, 15),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(25),
         borderSide: BorderSide(width: 1),
       ),
     ),

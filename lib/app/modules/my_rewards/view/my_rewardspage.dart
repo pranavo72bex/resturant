@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/commonwidgets/custom_app_bar.dart';
-import 'package:restaurantsapp/app/data/commonwidgets/side_floating_button.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/commonwidgets/custom_app_bar.dart';
+import 'package:restaurantsapp/app/core/commonwidgets/side_floating_button.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/modules/my_rewards/view/widgets/scratchcard.dart';
 
 class MyRewards extends StatelessWidget {

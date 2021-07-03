@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
 
 class HorizontalTimeText extends StatelessWidget {
   const HorizontalTimeText({Key? key}) : super(key: key);

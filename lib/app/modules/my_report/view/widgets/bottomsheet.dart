@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/data/constants/color_const.dart';
-import 'package:restaurantsapp/app/data/constants/image_const.dart';
+import 'package:restaurantsapp/app/core/constants/color_const.dart';
+import 'package:restaurantsapp/app/core/constants/image_const.dart';
+import 'package:restaurantsapp/app/modules/my_report/controller/radio_button_controller.dart';
 
-// ignore: must_be_immutable
+RadioButtonController radioButtonController = Get.put(RadioButtonController());
+
 class CustomBottomSheet extends StatelessWidget {
-  String groupvalue = '';
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(30),
-      height: MediaQuery.of(context).size.height * 0.42,
+      height: MediaQuery.of(context).size.height * 0.45,
       decoration: BoxDecoration(
         color: Colors.grey,
         borderRadius: BorderRadius.only(
@@ -47,7 +48,15 @@ class CustomBottomSheet extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Last 30 Days"),
-                Radio(value: null, groupValue: groupvalue, onChanged: null),
+                Obx(
+                  () => Radio(
+                    value: '1',
+                    groupValue: radioButtonController.groupValue.value,
+                    onChanged: (value) {
+                      return radioButtonController.ChangeValue(value);
+                    },
+                  ),
+                ),
               ],
             ),
           ),
@@ -58,7 +67,15 @@ class CustomBottomSheet extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Last 3 Months"),
-                Radio(value: null, groupValue: groupvalue, onChanged: null),
+                Obx(
+                  () => Radio(
+                    value: '2',
+                    groupValue: radioButtonController.groupValue.value,
+                    onChanged: (value) {
+                      return radioButtonController.ChangeValue(value);
+                    },
+                  ),
+                ),
               ],
             ),
           ),
@@ -69,7 +86,15 @@ class CustomBottomSheet extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Last 6 Months"),
-                Radio(value: null, groupValue: groupvalue, onChanged: null),
+                Obx(
+                  () => Radio(
+                    value: "3",
+                    groupValue: radioButtonController.groupValue.value,
+                    onChanged: (value) {
+                      return radioButtonController.ChangeValue(value);
+                    },
+                  ),
+                ),
               ],
             ),
           ),
@@ -80,7 +105,15 @@ class CustomBottomSheet extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Overall"),
-                Radio(value: null, groupValue: groupvalue, onChanged: null),
+                Obx(
+                  () => Radio(
+                    value: "4",
+                    groupValue: radioButtonController.groupValue.value,
+                    onChanged: (value) {
+                      return radioButtonController.ChangeValue(value);
+                    },
+                  ),
+                ),
               ],
             ),
           ),
