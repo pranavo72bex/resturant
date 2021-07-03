@@ -43,22 +43,15 @@ class InputPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           CustomButtons(
             inputtext: 'Submit',
             color: Colors.black,
-            ontap: () {
-              registerValidatorController.checkRegister();
-
-              if (registerValidatorController.RegisterFromKey.currentState!
-                  .validate()) {
-                Get.to(() => LoginPage());
-              }
-            },
+            ontap: () => submitbutn(),
           ),
           SizedBox(
-            height: 20,
+            height: 10,
           ),
           CustomButtons(
             inputtext: 'Continue with Gmail',
@@ -82,6 +75,14 @@ class InputPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void submitbutn() {
+    registerValidatorController.checkRegister();
+
+    if (registerValidatorController.RegisterFromKey.currentState!.validate()) {
+      Get.to(() => LoginPage());
+    }
   }
 
   Widget customButtonarrow() {
