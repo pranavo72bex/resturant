@@ -3,11 +3,6 @@ import 'package:flutter/painting.dart';
 
 import 'color_const.dart';
 
-const sooper = TextStyle(
-  color: Colors.black,
-  fontWeight: FontWeight.bold,
-  fontSize: 24,
-);
 const bodytext = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.bold,

@@ -10,7 +10,7 @@ class Apptheme {
         backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25.0),
+            borderRadius: BorderRadius.circular(10.0),
           ),
         ),
       ),
@@ -26,9 +26,9 @@ class Apptheme {
     fontFamily: GoogleFonts.poppins().fontFamily,
     inputDecorationTheme: InputDecorationTheme(
       isDense: true,
-      contentPadding: EdgeInsets.fromLTRB(38, 10, 0, 15),
+      contentPadding: EdgeInsets.fromLTRB(38, 18, 0, 18),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(10),
         borderSide: BorderSide(width: 1),
       ),
     ),

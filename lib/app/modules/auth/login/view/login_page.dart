@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:restaurantsapp/app/core/commonwidgets/headerimg.dart';
 import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/core/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/auth/login/controller/validatorController.dart';
@@ -24,9 +25,9 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.asset(soooperimg),
+                  HeaderImage(),
                   SizedBox(
-                    height: 83,
+                    height: 76,
                   ),
                   Text("Enter your Name &  Email ID"),
                   SizedBox(height: 10),

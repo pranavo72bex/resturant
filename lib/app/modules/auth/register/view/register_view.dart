@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurantsapp/app/core/constants/conts.dart';
-import 'package:restaurantsapp/app/core/constants/image_const.dart';
+import 'package:restaurantsapp/app/core/commonwidgets/headerimg.dart';
 import 'package:restaurantsapp/app/modules/auth/register/view/widgets/register_widget.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -16,26 +15,27 @@ class RegisterPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  soooperimg,
-                ),
+                HeaderImage(),
                 SizedBox(
-                  height: 83,
+                  height: 46,
                 ),
                 Text(
                   "Let's Register.",
-                  style: sooper,
+                  style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   height: 5,
                 ),
-                Text("Enter your Mobile Number"),
+                Text(
+                  "Enter your Mobile Number",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
+                ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 InputPage(),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.only(top: 15.0),
                   child: Text(
                     "By Continuing agreed to use Sooooper linkTerms of use & Privacy Policy",
                     style: TextStyle(fontSize: 12),

@@ -1,9 +1,13 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:restaurantsapp/app/core/commonwidgets/custom_buttons.dart';
 import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/core/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/auth/login/view/login_page.dart';
 import 'package:restaurantsapp/app/modules/auth/register/controller/registervalidator.dart';
+import 'package:restaurantsapp/app/modules/auth/register/view/widgets/otp_screens.dart';
 
 RegisterValidatorController registerValidatorController =
     Get.put(RegisterValidatorController());
@@ -23,10 +27,10 @@ class InputPage extends StatelessWidget {
               keyboardType: TextInputType.phone,
               decoration: InputDecoration(
                 suffixIcon: customButtonarrow(),
-                hintText: "Mobile Number",
+                hintText: "9845xxxx",
                 hintStyle: TextStyle(
                   color: Kblack,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.normal,
                 ),
               ),
               controller: registerValidatorController.phoneNumberController,
@@ -41,42 +45,40 @@ class InputPage extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Container(
-            width: 309,
-            child: TextFormField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                hintText: "Enter OTP",
-                hintStyle: TextStyle(
-                  color: Kgrey,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
+          CustomButtons(
+            inputtext: 'Submit',
+            color: Colors.black,
+            ontap: () {
+              registerValidatorController.checkRegister();
+
+              if (registerValidatorController.RegisterFromKey.currentState!
+                  .validate()) {
+                Get.to(() => LoginPage());
+              }
+            },
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          CustomButtons(
+            inputtext: 'Continue with Gmail',
+            color: Colors.red,
+            icon: Icons.mail_outline_rounded,
+            ontap: () {
+              print("Gmail");
+            },
           ),
           SizedBox(
             height: 10,
           ),
-          SizedBox(
-            height: 50,
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {
-                registerValidatorController.checkRegister();
-
-                if (registerValidatorController.RegisterFromKey.currentState!
-                    .validate()) {
-                  Get.to(() => LoginPage());
-                }
-              },
-              child: Text(
-                "submit",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          )
+          CustomButtons(
+            inputtext: 'Continue with Facebook',
+            color: Colors.blue,
+            icon: Icons.facebook,
+            ontap: () {
+              print("Facebook");
+            },
+          ),
         ],
       ),
     );
@@ -84,7 +86,9 @@ class InputPage extends StatelessWidget {
 
   Widget customButtonarrow() {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Get.to(OTPScreen());
+      },
       child: Container(
         padding: EdgeInsets.all(10),
         margin: EdgeInsets.all(5),
