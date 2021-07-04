@@ -5,7 +5,7 @@ import 'package:restaurantsapp/app/core/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/my_report/view/myreport_page.dart';
 import 'package:restaurantsapp/app/modules/my_rewards/view/my_rewardspage.dart';
 import 'package:restaurantsapp/app/modules/my_wallet/view/my_walletpage.dart';
-import 'package:restaurantsapp/app/modules/users_profile/view/usrs_page.dart';
+import 'package:restaurantsapp/app/modules/orders/view/order_screen.dart';
 
 class HomeButtomCard extends StatelessWidget {
   const HomeButtomCard({Key? key}) : super(key: key);
@@ -35,25 +35,25 @@ class HomeButtomCard extends StatelessWidget {
                 onTap: () {
                   Get.to(MywalletPage());
                 },
-                child: CustomButtons("Wallet"),
+                child: _Custombottomsheetbuttons(text: "Wallet"),
               ),
               InkWell(
                 onTap: () {
                   Get.to(MyRewards());
                 },
-                child: CustomButtons("Rewards"),
+                child: _Custombottomsheetbuttons(text: "Rewards"),
               ),
               InkWell(
                 onTap: () {
-                  Get.to(() => UsersInfo());
+                  Get.to(() => OrderPage());
                 },
-                child: CustomButtons("User Info"),
+                child: _Custombottomsheetbuttons(text: "Orders"),
               ),
               InkWell(
                 onTap: () {
                   Get.to(MyReportPage());
                 },
-                child: CustomButtons("Reports"),
+                child: _Custombottomsheetbuttons(text: "Reports"),
               ),
             ],
           ),
@@ -116,8 +116,18 @@ class HomeButtomCard extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget CustomButtons(String text) {
+class _Custombottomsheetbuttons extends StatelessWidget {
+  const _Custombottomsheetbuttons({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 10, right: 10, top: 15),
       height: 24,

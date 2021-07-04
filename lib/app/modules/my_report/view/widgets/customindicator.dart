@@ -8,19 +8,43 @@ class CutomIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomIndicator("Restaurant", Kblue, kwhite),
-        CustomIndicator("Grocery", korange, kgreybackground),
-        CustomIndicator("Medicines", kred, kwhite),
-        CustomIndicator("Bakery", klime, kgreybackground),
+        _CustomIndicator(
+          text: "Restaurant",
+          indicolor: Kblue,
+        ),
+        _CustomIndicator(
+          text: "Grocery",
+          indicolor: korange,
+          bgcolor: kgreybackground,
+        ),
+        _CustomIndicator(
+          text: "Medicines",
+          indicolor: kred,
+        ),
+        _CustomIndicator(
+          text: "Bakery",
+          indicolor: klime,
+          bgcolor: kgreybackground,
+        ),
       ],
     );
   }
+}
 
-  Widget CustomIndicator(
-    String text,
-    dynamic indicolor,
-    dynamic bgcolor,
-  ) {
+class _CustomIndicator extends StatelessWidget {
+  const _CustomIndicator({
+    Key? key,
+    required this.text,
+    required this.indicolor,
+    this.bgcolor,
+  }) : super(key: key);
+
+  final String text;
+  final indicolor;
+  final bgcolor;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(8),
       height: 40,

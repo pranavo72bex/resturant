@@ -33,15 +33,18 @@ class MyReportHeader extends StatelessWidget {
               );
             },
             child: Container(
-              width: 60,
+              width: 70,
               decoration: BoxDecoration(
                 border: Border.all(color: bordercolor),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(8),
               ),
               child: Center(
                 child: Text(
                   "Sort",
-                  style: TextStyle(color: Kblue),
+                  style: TextStyle(
+                    color: Kblue,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
