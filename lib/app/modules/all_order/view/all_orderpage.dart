@@ -31,12 +31,6 @@ class _AllOrderState extends State<AllOrder>
           controller: _scrollController,
           headerSliverBuilder: (context, _) {
             return [
-              // SliverToBoxAdapter(
-              //   child: Padding(
-              //     padding: const EdgeInsets.all(8.0),
-              //     child: CustomeAppbar(),
-              //   ),
-              // ),
               SliverToBoxAdapter(
                 child: TabBar(
                   labelColor: Colors.black,
@@ -46,6 +40,7 @@ class _AllOrderState extends State<AllOrder>
                   unselectedLabelStyle:
                       TextStyle(fontWeight: FontWeight.normal),
                   controller: _tabBarController,
+                  indicatorColor: Colors.transparent,
                   tabs: [
                     Container(
                       height: 40,
