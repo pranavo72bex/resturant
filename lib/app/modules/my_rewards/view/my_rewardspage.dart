@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurantsapp/app/core/commonwidgets/custom_app_bar.dart';
+import 'package:restaurantsapp/app/core/commonwidgets/horizontal_strip.dart';
 import 'package:restaurantsapp/app/core/commonwidgets/side_floating_button.dart';
 import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/modules/my_rewards/view/widgets/scratchcard.dart';
@@ -15,15 +16,8 @@ class MyRewards extends StatelessWidget {
         child: Stack(children: [
           Column(
             children: [
-              Container(
-                padding: EdgeInsets.all(8),
-                height: 40,
-                width: double.infinity,
-                color: kgreybackground,
-                child: Text(
-                  "My Rewards",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+              Horizontalstrip(
+                text: 'My Rewards',
               ),
               Expanded(
                 child: GridView.builder(

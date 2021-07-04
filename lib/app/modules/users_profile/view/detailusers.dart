@@ -67,162 +67,112 @@ class DetailsUsers extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(10),
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Text("Name"),
-                  Spacer(),
-                  InkWell(
-                    onTap: () {},
-                    child: Image.asset(
-                      editpenimg,
-                    ),
-                  ),
-                ],
-              ),
+            _CustomContainerBody(
+              text: 'Name',
+              verifytext: '',
+              img: editpenimg,
             ),
-            Container(
-              padding: EdgeInsets.all(10),
-              height: 40,
-              color: kgreybackground,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Text("9767301020"),
-                  Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: Text("Verified"),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Image.asset(
-                      editpenimg,
-                    ),
-                  ),
-                ],
-              ),
+            _CustomContainerBody(
+              text: '9812345678',
+              verifytext: "verify",
+              backgroundcolor: kgreybackground,
+              img: editpenimg,
             ),
-            Container(
-              padding: EdgeInsets.all(10),
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Text("rohan57patil@gmail.com"),
-                  Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: Text("Verify"),
-                  ),
-                  InkWell(
-                    onTap: () {},
-                    child: Image.asset(
-                      editpenimg,
-                    ),
-                  ),
-                ],
-              ),
+            _CustomContainerBody(
+              text: "rohan@123gmail.com",
+              verifytext: 'verify',
+              img: editpenimg,
             ),
-            InkWell(
-              onTap: () {},
-              child: Container(
-                padding: EdgeInsets.all(10),
-                height: 40,
-                color: kgreybackground,
-                width: double.infinity,
-                child: Row(
-                  children: [
-                    Text("Send Feedback"),
-                  ],
-                ),
-              ),
+            _CustomContainerBody(
+              text: 'Send Feedback',
+              verifytext: '',
+              backgroundcolor: kgreybackground,
+              img: '',
             ),
-            InkWell(
-              onTap: () {},
-              child: Container(
-                padding: EdgeInsets.all(10),
-                height: 40,
-                width: double.infinity,
-                child: Row(
-                  children: [
-                    Text("Addess Book"),
-                    Spacer(),
-                    Text(
-                      "Addess Book",
-                      style: TextStyle(color: Kgrey),
-                    ),
-                  ],
-                ),
-              ),
+            addressContainer(),
+            _CustomContainerBody(
+              text: 'Home',
+              verifytext: '',
+              img: '',
+              backgroundcolor: kgreybackground,
             ),
-            InkWell(
-              onTap: () {},
-              child: Container(
-                padding: EdgeInsets.all(10),
-                height: 40,
-                color: kgreybackground,
-                width: double.infinity,
-                child: Text("Home"),
-              ),
+            _CustomContainerBody(
+              text: 'C-12/15 Sector 46 Seawoods 400706',
+              verifytext: '',
+              img: editpenimg,
             ),
-            Container(
-              padding: EdgeInsets.all(10),
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Text(
-                    "C-12/15 Sector 46 Seawoods 400706",
-                    style: TextStyle(color: Kgrey),
-                  ),
-                  Spacer(),
-                  InkWell(
-                    onTap: () {},
-                    child: Image.asset(
-                      editpenimg,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            InkWell(
-              onTap: () {},
-              child: Container(
-                padding: EdgeInsets.all(10),
-                height: 40,
-                color: kgreybackground,
-                width: double.infinity,
-                child: Text("Home"),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.all(10),
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Text(
-                    "E101 Empire Building Mumbai 400001",
-                    style: TextStyle(color: Kgrey),
-                  ),
-                  Spacer(),
-                  InkWell(
-                    onTap: () {},
-                    child: Image.asset(
-                      editpenimg,
-                    ),
-                  ),
-                ],
-              ),
+            _CustomContainerBody(
+              text: 'E101 Empire Building Mumbai 400001',
+              verifytext: '',
+              img: editpenimg,
             ),
             SizedBox(height: 40),
             PrivacyandPolicyText(),
           ],
         ),
+      ),
+    );
+  }
+
+  InkWell addressContainer() {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        padding: EdgeInsets.all(10),
+        height: 40,
+        width: double.infinity,
+        child: Row(
+          children: [
+            Text("Addess Book"),
+            Spacer(),
+            Text(
+              "Addess Book",
+              style: TextStyle(color: Kgrey),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _CustomContainerBody extends StatelessWidget {
+  const _CustomContainerBody({
+    Key? key,
+    required this.text,
+    required this.verifytext,
+    this.backgroundcolor,
+    required this.img,
+  }) : super(key: key);
+  final String text;
+  final String verifytext;
+  final backgroundcolor;
+  final String img;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(10),
+      height: 40,
+      color: backgroundcolor,
+      width: double.infinity,
+      child: Row(
+        children: [
+          Text(text),
+          Spacer(),
+          if (verifytext.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Text(verifytext),
+            ),
+          if (img.isNotEmpty)
+            InkWell(
+              onTap: () {},
+              child: Image.asset(
+                img,
+              ),
+            ),
+        ],
       ),
     );
   }

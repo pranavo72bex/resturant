@@ -18,12 +18,30 @@ class UsersInfo extends StatelessWidget {
             Column(
               children: [
                 HeaderTextUsers(),
-                CustomContainerText("FAQ", kwhite),
-                CustomContainerText("Support", kgreybackground),
-                CustomContainerText("Register your Business", kwhite),
-                CustomContainerText("Send Feedback", kgreybackground),
-                CustomContainerText("Rate us On the Play Store", kwhite),
-                CustomContainerText("Log Out", kgreybackground),
+                customContainerText(
+                  text: "FAQ",
+                  color: kwhite,
+                ),
+                customContainerText(
+                  text: "Support",
+                  color: kgreybackground,
+                ),
+                customContainerText(
+                  text: "Register your Business",
+                  color: kwhite,
+                ),
+                customContainerText(
+                  text: "Send Feedback",
+                  color: kgreybackground,
+                ),
+                customContainerText(
+                  text: "Rate us On the Play Store",
+                  color: kwhite,
+                ),
+                customContainerText(
+                  text: "Log Out",
+                  color: kgreybackground,
+                ),
                 SizedBox(height: 40),
                 PrivacyandPolicyText()
               ],
@@ -34,8 +52,20 @@ class UsersInfo extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget CustomContainerText(String text, dynamic color) {
+class customContainerText extends StatelessWidget {
+  const customContainerText({
+    Key? key,
+    required this.text,
+    required this.color,
+  }) : super(key: key);
+
+  final String text;
+  final color;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10),
       height: 40,
