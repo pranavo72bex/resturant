@@ -16,7 +16,12 @@ class Horizontalstrip extends StatelessWidget {
       color: kgreybackground,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Text(text),
+        child: Text(
+          text,
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }
