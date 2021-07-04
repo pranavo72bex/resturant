@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/core/commonwidgets/custom_radiobutton.dart';
+import 'package:restaurantsapp/app/modules/all_order/view/widgets/custom_radiobutton.dart';
 import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/core/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/all_order/controller/radiobutton_controller.dart';

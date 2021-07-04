@@ -41,113 +41,95 @@ class CustomBottomSheet extends StatelessWidget {
             ],
           ),
           SizedBox(height: 10),
-          Container(
-            height: 30,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Last 30 Days"),
-                Obx(
-                  () => Radio(
-                    value: '1',
-                    groupValue: radioButtonController.groupValue.value,
-                    onChanged: (value) {
-                      return radioButtonController.ChangeValue(value);
-                    },
-                  ),
-                ),
-              ],
-            ),
+          _customRadioButton(
+            text: "Last 24 hrs",
+            value: '1',
           ),
-          Container(
-            height: 30,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Last 3 Months"),
-                Obx(
-                  () => Radio(
-                    value: '2',
-                    groupValue: radioButtonController.groupValue.value,
-                    onChanged: (value) {
-                      return radioButtonController.ChangeValue(value);
-                    },
-                  ),
-                ),
-              ],
-            ),
+          _customRadioButton(
+            text: "Last 3 days",
+            value: '2',
           ),
-          Container(
-            height: 30,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Last 6 Months"),
-                Obx(
-                  () => Radio(
-                    value: "3",
-                    groupValue: radioButtonController.groupValue.value,
-                    onChanged: (value) {
-                      return radioButtonController.ChangeValue(value);
-                    },
-                  ),
-                ),
-              ],
-            ),
+          _customRadioButton(
+            text: "Last 7 days",
+            value: '3',
           ),
-          Container(
-            height: 30,
-            width: double.infinity,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Overall"),
-                Obx(
-                  () => Radio(
-                    value: "4",
-                    groupValue: radioButtonController.groupValue.value,
-                    onChanged: (value) {
-                      return radioButtonController.ChangeValue(value);
-                    },
-                  ),
-                ),
-              ],
-            ),
+          _customRadioButton(
+            text: "Last a month",
+            value: '4',
           ),
           SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Container(
-                height: 40,
-                width: 112,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Kblue),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Center(
-                  child: Text("Clear"),
-                ),
+              InkWell(
+                onTap: () {},
+                child: _customButtonbottomsheet(text: "Clear"),
               ),
-              Container(
-                height: 40,
-                width: 112,
-                decoration: BoxDecoration(
-                  color: Kblue,
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Center(
-                  child: Text(
-                    "Apply",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
+              InkWell(
+                onTap: () {},
+                child: _customButtonbottomsheet(text: "Apply", color: Kblue),
               ),
             ],
           )
+        ],
+      ),
+    );
+  }
+}
+
+class _customButtonbottomsheet extends StatelessWidget {
+  const _customButtonbottomsheet({
+    Key? key,
+    required this.text,
+    this.color,
+  }) : super(key: key);
+  final String text;
+  final color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      width: 112,
+      decoration: BoxDecoration(
+        color: color,
+        border: Border.all(color: Kblue),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Center(
+        child: Text(text),
+      ),
+    );
+  }
+}
+
+class _customRadioButton extends StatelessWidget {
+  const _customRadioButton({
+    Key? key,
+    required this.text,
+    required this.value,
+  }) : super(key: key);
+  final String text;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 30,
+      width: double.infinity,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(text),
+          Obx(
+            () => Radio(
+              value: value,
+              groupValue: radioButtonController.groupValue.value,
+              onChanged: (value) {
+                return radioButtonController.ChangeValue(value);
+              },
+            ),
+          ),
         ],
       ),
     );
