@@ -42,23 +42,11 @@ class _AllOrderState extends State<AllOrder>
                   controller: _tabBarController,
                   indicatorColor: Colors.transparent,
                   tabs: [
-                    Container(
-                      height: 40,
-                      width: 160,
-                      decoration: BoxDecoration(
-                        color: kgreybackground,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Tab(text: 'All Orders'),
+                    CustomTabContainer(
+                      text: 'All Orders',
                     ),
-                    Container(
-                      height: 40,
-                      width: 160,
-                      decoration: BoxDecoration(
-                        color: kgreybackground,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Tab(text: 'Favourite Orders'),
+                    CustomTabContainer(
+                      text: 'Favourite Orders',
                     ),
                   ],
                 ),
@@ -97,7 +85,6 @@ class _AllOrderState extends State<AllOrder>
                       ],
                     ),
                   ),
-                  SideFloatingBtn(),
                 ],
               ),
               Stack(
@@ -129,13 +116,33 @@ class _AllOrderState extends State<AllOrder>
                       ],
                     ),
                   ),
-                  SideFloatingBtn(),
                 ],
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class CustomTabContainer extends StatelessWidget {
+  const CustomTabContainer({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      width: 160,
+      decoration: BoxDecoration(
+        color: kgreybackground,
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Tab(text: text),
     );
   }
 }
