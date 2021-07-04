@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:restaurantsapp/app/core/constants/image_const.dart';
+import 'package:restaurantsapp/app/modules/users_profile/view/usrs_page.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
@@ -17,7 +19,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       automaticallyImplyLeading: false,
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(() => UsersInfo());
+          },
           icon: Container(
             child: ImageIcon(
               AssetImage(
