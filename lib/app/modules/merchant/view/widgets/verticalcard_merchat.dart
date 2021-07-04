@@ -42,7 +42,7 @@ class MerchantverticalCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: 25,
+          left: 18,
           bottom: 4,
           child: Stack(
             children: [
@@ -51,10 +51,10 @@ class MerchantverticalCard extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: korange,
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(8),
                   ),
                   height: 25,
-                  width: 50,
+                  width: 65,
                   child: Center(
                     child: Text(
                       "ADD",
@@ -102,8 +102,8 @@ class MerchantverticalCard extends StatelessWidget {
       children: [
         Image.asset(
           vegimg,
-          height: 20,
-          width: 20,
+          height: 13,
+          width: 13,
         ),
         Text(
           "Red velvet cake[Double Layer]",

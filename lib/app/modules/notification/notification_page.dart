@@ -27,7 +27,7 @@ class NotificationPage extends StatelessWidget {
                 itemCount: 20,
                 itemBuilder: (context, index) {
                   return Container(
-                    padding: EdgeInsets.only(left: 8, top: 8, bottom: 2),
+                    padding: EdgeInsets.all(6),
                     width: double.infinity,
                     color: index % 2 == 0 ? kwhite : kgreybackground,
                     child: Text(

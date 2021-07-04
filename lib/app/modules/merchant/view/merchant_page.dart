@@ -44,10 +44,10 @@ class _MerchantPageState extends State<MerchantPage>
                   margin: EdgeInsets.only(top: 8, bottom: 8),
                   color: kgreybackground,
                   child: TabBar(
-                    indicatorColor: Colors.grey,
+                    indicatorColor: Colors.transparent,
                     labelColor: Colors.black,
                     labelStyle:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
                     unselectedLabelColor: Colors.black,
                     unselectedLabelStyle:
                         TextStyle(fontWeight: FontWeight.normal),

@@ -17,7 +17,6 @@ class SearchOrder extends StatelessWidget {
             height: 40,
             child: TextFormField(
               decoration: InputDecoration(
-                hintText: "Search",
                 prefixIcon: ImageIcon(
                   AssetImage(
                     searchimg,
