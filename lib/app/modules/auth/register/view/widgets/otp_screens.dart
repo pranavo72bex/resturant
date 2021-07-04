@@ -38,9 +38,9 @@ class OTPScreen extends StatelessWidget {
             height: 20,
           ),
           PinCodeTextField(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             appContext: context,
-            length: 6,
+            length: 5,
             onChanged: (_) {},
             backgroundColor: Colors.transparent,
             autoFocus: true,

@@ -35,7 +35,11 @@ class RegisterPage extends StatelessWidget {
                 ),
                 InputPage(),
                 Padding(
-                  padding: const EdgeInsets.only(top: 15.0),
+                  padding: const EdgeInsets.only(
+                    top: 15.0,
+                    left: 35,
+                    right: 30,
+                  ),
                   child: Text(
                     "By Continuing agreed to use Sooooper linkTerms of use & Privacy Policy",
                     style: TextStyle(fontSize: 12),

@@ -43,7 +43,7 @@ class InputPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 20,
+            height: 15,
           ),
           CustomButtons(
             inputtext: 'Submit',

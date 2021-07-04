@@ -18,13 +18,13 @@ class SideFloatingButtons extends StatelessWidget {
           RotatedBox(
             quarterTurns: -1,
             child: Container(
-              height: 34,
+              height: 30,
               width: 275,
               decoration: BoxDecoration(
                 color: Colors.grey[100],
                 borderRadius: BorderRadiusDirectional.only(
-                  bottomStart: Radius.circular(20),
-                  bottomEnd: Radius.circular(20),
+                  bottomStart: Radius.circular(22),
+                  bottomEnd: Radius.circular(22),
                 ),
               ),
               child: Row(
@@ -43,7 +43,7 @@ class SideFloatingButtons extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: 15,
+                        fontSize: 13,
                       ),
                     ),
                     style: TextButton.styleFrom(
@@ -58,14 +58,20 @@ class SideFloatingButtons extends StatelessWidget {
                     },
                     child: Text(
                       'Offers',
-                      style: TextStyle(color: Colors.black, fontSize: 15),
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 13,
+                      ),
                     ),
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
                       'New products',
-                      style: TextStyle(color: Colors.black, fontSize: 15),
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 13,
+                      ),
                     ),
                   ),
                 ],
@@ -77,12 +83,12 @@ class SideFloatingButtons extends StatelessWidget {
             quarterTurns: 1,
             child: Container(
               height: 30,
-              width: 132,
+              width: 130,
               decoration: BoxDecoration(
                 color: Colors.grey[100],
                 borderRadius: BorderRadiusDirectional.only(
-                  bottomStart: Radius.circular(20),
-                  bottomEnd: Radius.circular(20),
+                  bottomStart: Radius.circular(18),
+                  bottomEnd: Radius.circular(18),
                 ),
               ),
               child: Padding(
@@ -96,9 +102,9 @@ class SideFloatingButtons extends StatelessWidget {
                     child: Text(
                       'Near By',
                       style: TextStyle(
-                        color: Kblack,
-                        fontWeight: FontWeight.bold,
-                      ),
+                          color: Kblack,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12),
                     ),
                   ),
                 ),

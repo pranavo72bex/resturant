@@ -9,16 +9,22 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Image.asset(soooperimg),
+      title: Container(
+        height: 50,
+        width: 140,
+        child: Image.asset(soooperimg),
+      ),
       automaticallyImplyLeading: false,
       actions: [
         IconButton(
           onPressed: () {},
-          icon: ImageIcon(
-            AssetImage(
-              usrimg,
+          icon: Container(
+            child: ImageIcon(
+              AssetImage(
+                usrimg,
+              ),
+              color: Colors.black,
             ),
-            color: Colors.black,
           ),
         ),
         IconButton(

@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
-import 'package:restaurantsapp/app/modules/onboarding_screen/view/onboarding_screen.dart';
 import 'app/core/themedata/theme_data.dart';
-import 'app/modules/my_report/view/myreport_page.dart';
+import 'app/modules/home/views/widgets/bottomnaviagationbar.dart';
 import 'app/routes/app_pages.dart';
 
 Future<void> main() async {
@@ -22,7 +21,7 @@ Future<void> main() async {
       title: "Application",
       getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
-      home: OnboardingScreens(),
+      home: AppNavigator(),
     ),
   );
 }
