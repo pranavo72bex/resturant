@@ -1,6 +1,6 @@
 import 'package:get/state_manager.dart';
 
-class RadioButtonController extends GetxController {
+class ReportRadioButtonController extends GetxController {
   var groupValue = '1'.obs;
 
   void ChangeValue(value) {

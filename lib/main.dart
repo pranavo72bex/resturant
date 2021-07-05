@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
+import 'package:restaurantsapp/app/modules/onboarding_screen/view/onboarding_screen.dart';
 import 'app/core/themedata/theme_data.dart';
-import 'app/modules/home/views/widgets/bottomnaviagationbar.dart';
 import 'app/routes/app_pages.dart';
 
 Future<void> main() async {
@@ -18,10 +18,11 @@ Future<void> main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      // initialBinding: AllControllerBinding(),
       title: "Application",
       getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
-      home: AppNavigator(),
+      home: OnboardingScreens(),
     ),
   );
 }

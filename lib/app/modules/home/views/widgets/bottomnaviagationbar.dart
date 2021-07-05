@@ -7,8 +7,7 @@ import 'package:restaurantsapp/app/modules/home/views/home_view.dart';
 import 'package:restaurantsapp/app/modules/merchant/view/merchant_page.dart';
 import 'package:restaurantsapp/app/modules/notification/notification_page.dart';
 
-BottomNavigationController bottomNavigationController =
-    Get.put(BottomNavigationController());
+BottomNavigationController bottomNavigationController = Get.find();
 
 // ignore: must_be_immutable
 class AppNavigator extends StatelessWidget {

@@ -4,7 +4,8 @@ import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/core/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/my_report/controller/radio_button_controller.dart';
 
-RadioButtonController radioButtonController = Get.put(RadioButtonController());
+ReportRadioButtonController radioButtonController =
+    Get.put(ReportRadioButtonController());
 
 class CustomBottomSheet extends StatelessWidget {
   @override

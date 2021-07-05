@@ -51,7 +51,7 @@ class HomeButtomCard extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Get.to(MyReportPage());
+                  Get.to(() => MyReportPage());
                 },
                 child: _Custombottomsheetbuttons(text: "Reports"),
               ),

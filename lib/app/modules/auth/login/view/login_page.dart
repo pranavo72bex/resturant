@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:restaurantsapp/app/binding/allcontroller_binding.dart';
 import 'package:restaurantsapp/app/core/commonwidgets/headerimg.dart';
 import 'package:restaurantsapp/app/core/constants/color_const.dart';
-import 'package:restaurantsapp/app/core/constants/image_const.dart';
 import 'package:restaurantsapp/app/modules/auth/login/controller/validatorController.dart';
 import 'package:restaurantsapp/app/modules/home/views/widgets/bottomnaviagationbar.dart';
 
@@ -78,7 +78,10 @@ class LoginPage extends StatelessWidget {
                         loginValidatorController.checkLogin();
                         if (loginValidatorController.loginFormKey.currentState!
                             .validate()) {
-                          Get.offAll(() => AppNavigator());
+                          Get.offAll(
+                            () => AppNavigator(),
+                            binding: AllControllerBinding(),
+                          );
                         }
                       },
                       child: Text(
