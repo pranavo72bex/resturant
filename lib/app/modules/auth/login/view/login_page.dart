@@ -78,10 +78,11 @@ class LoginPage extends StatelessWidget {
                         loginValidatorController.checkLogin();
                         if (loginValidatorController.loginFormKey.currentState!
                             .validate()) {
-                          Get.offAll(
-                            () => AppNavigator(),
-                            binding: AllControllerBinding(),
-                          );
+                          Get.toNamed("/appNaviagator");
+                          // Get.offAll(
+                          //   () => AppNavigator(),
+                          //   binding: AllControllerBinding(),
+                          // );
                         }
                       },
                       child: Text(

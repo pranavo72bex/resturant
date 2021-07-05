@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 import 'package:restaurantsapp/app/modules/onboarding_screen/view/onboarding_screen.dart';
+import 'app/binding/allcontroller_binding.dart';
 import 'app/core/themedata/theme_data.dart';
 import 'app/routes/app_pages.dart';
 
@@ -18,7 +19,7 @@ Future<void> main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // initialBinding: AllControllerBinding(),
+      //initialBinding: AllControllerBinding(),
       title: "Application",
       getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
