@@ -21,14 +21,22 @@ class VerticalContainer extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _RowtextButton("Order ID : 1000043216", "Set as favouite", Kblue),
+          _RowtextButton(
+            text: "Order ID : 1000043216",
+            button: "Set as favouite",
+            color: Kblue,
+          ),
           Text(
             "Majha Morya",
             style: TextStyle(
               fontSize: 10,
             ),
           ),
-          _RowtextButton("3 items   Rs. 3001", "Pay for Order", Kblack),
+          _RowtextButton(
+            text: "3 items   Rs. 3001",
+            button: "Pay for Order",
+            color: Kblack,
+          ),
           SizedBox(height: 10),
           Row(
             children: [
@@ -40,36 +48,16 @@ class VerticalContainer extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              Container(
-                width: 60,
-                padding: EdgeInsets.all(3),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: bordercolor),
-                ),
-                child: Center(
-                  child: Text(
-                    "Cancel",
-                    style: TextStyle(fontSize: 8),
-                  ),
-                ),
+              _CancelRecordButtons(
+                text: 'Cancel',
+                color: kwhite,
               ),
               SizedBox(
                 width: 6,
               ),
-              Container(
-                width: 60,
-                padding: EdgeInsets.all(3),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: kgreen,
-                ),
-                child: Center(
-                  child: Text(
-                    "Reorder",
-                    style: TextStyle(color: Colors.white, fontSize: 8),
-                  ),
-                ),
+              _CancelRecordButtons(
+                text: 'Recorders',
+                color: kgreen,
               ),
             ],
           ),
@@ -81,8 +69,51 @@ class VerticalContainer extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _RowtextButton(String text, String button, dynamic color) {
+class _CancelRecordButtons extends StatelessWidget {
+  const _CancelRecordButtons({
+    Key? key,
+    required this.text,
+    this.color,
+  }) : super(key: key);
+  final String text;
+  final color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 60,
+      padding: EdgeInsets.all(3),
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: bordercolor),
+      ),
+      child: Center(
+        child: Text(
+          text,
+          style: TextStyle(fontSize: 8),
+        ),
+      ),
+    );
+  }
+}
+
+class _RowtextButton extends StatelessWidget {
+  const _RowtextButton({
+    Key? key,
+    required this.text,
+    required this.button,
+    required this.color,
+  }) : super(key: key);
+
+  final String text;
+  final String button;
+  final color;
+
+  @override
+  Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

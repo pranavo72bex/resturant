@@ -9,15 +9,39 @@ class HorizontalTimeText extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CutomText("Order Accepted", "20/02/021"),
-        CutomText("Order Processing", "20/02/021"),
-        CutomText("Out For Delivery", "20/02/021"),
-        CutomText("Yet to be delivered", "20/02/021"),
+        _Customtext(
+          header: "Order Accepted",
+          time: "20/02/021",
+        ),
+        _Customtext(
+          header: "Order Processing",
+          time: "20/02/021",
+        ),
+        _Customtext(
+          header: "Out For Delivery",
+          time: "20/02/021",
+        ),
+        _Customtext(
+          header: "Yet to be delivered",
+          time: "20/02/021",
+        ),
       ],
     );
   }
+}
 
-  Widget CutomText(String header, String time) {
+class _Customtext extends StatelessWidget {
+  const _Customtext({
+    Key? key,
+    required this.header,
+    required this.time,
+  }) : super(key: key);
+
+  final String header;
+  final String time;
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: [
         Text(

@@ -24,6 +24,5 @@ class RoundedUsers extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

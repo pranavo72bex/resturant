@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:restaurantsapp/app/core/commonwidgets/custom_buttons.dart';
 import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/core/constants/image_const.dart';
-import 'package:restaurantsapp/app/modules/auth/login/view/login_page.dart';
 import 'package:restaurantsapp/app/modules/auth/register/controller/registervalidator.dart';
 import 'package:restaurantsapp/app/modules/auth/register/view/widgets/otp_screens.dart';
 

@@ -9,18 +9,46 @@ class HorizontalTimeLine extends StatelessWidget {
         SizedBox(
           width: 15,
         ),
-        CustomCircle(true),
-        Customline(85),
-        CustomCircle(true),
-        Customline(85),
-        CustomCircle(true),
-        Customline(90),
-        CustomCircle(false),
+        _CustomCirlcle(x: true),
+        _CustomLine(width: 85),
+        _CustomCirlcle(x: true),
+        _CustomLine(width: 85),
+        _CustomCirlcle(x: true),
+        _CustomLine(width: 90),
+        _CustomCirlcle(x: false),
       ],
     );
   }
+}
 
-  Widget CustomCircle(bool x) {
+class _CustomLine extends StatelessWidget {
+  const _CustomLine({
+    Key? key,
+    required this.width,
+  }) : super(key: key);
+
+  final double width;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: width,
+      height: 1,
+      color: bordercolor,
+    );
+  }
+}
+
+class _CustomCirlcle extends StatelessWidget {
+  const _CustomCirlcle({
+    Key? key,
+    required this.x,
+  }) : super(key: key);
+
+  final bool x;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       height: 7,
       width: 7,
@@ -29,14 +57,6 @@ class HorizontalTimeLine extends StatelessWidget {
         border: Border.all(color: bordercolor),
         color: x ? kgreen : kwhite,
       ),
-    );
-  }
-
-  Widget Customline(double width) {
-    return Container(
-      width: width,
-      height: 1,
-      color: bordercolor,
     );
   }
 }
