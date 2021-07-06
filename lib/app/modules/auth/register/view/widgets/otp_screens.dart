@@ -58,6 +58,13 @@ class OTPScreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
+          Text(
+            "0:30",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          ),
+          SizedBox(
+            height: 20,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

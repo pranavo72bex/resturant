@@ -4,7 +4,8 @@ import 'package:restaurantsapp/app/core/commonwidgets/headerimg.dart';
 import 'package:restaurantsapp/app/core/constants/color_const.dart';
 import 'package:restaurantsapp/app/core/constants/conts.dart';
 import 'package:restaurantsapp/app/core/constants/image_const.dart';
-import 'package:restaurantsapp/app/modules/auth/register/view/register_view.dart';
+
+import '../../../../main.dart';
 
 class OnboardingScreens extends StatelessWidget {
   const OnboardingScreens({Key? key}) : super(key: key);
@@ -38,8 +39,7 @@ class OnboardingScreens extends StatelessWidget {
                     splashRadius: 100,
                     onPressed: () {
                       Get.toNamed("/register");
-
-                      // Get.off(() => RegisterPage());
+                      userdata.writeIfNull('intro', false);
                     },
                     icon: _cutombuttons(),
                     splashColor: Kfadedblue,

@@ -12,6 +12,7 @@ dependencies:
   scratcher: ^2.1.0
   fl_chart: ^0.36.2
   pin_code_fields: ^7.2.0
+  get_storage: ^2.0.2
  
 
  
@@ -21,6 +22,13 @@ dependencies:
 dev_dependencies: 
   flutter_test: 
     sdk: flutter
+  flutter_native_splash: ^1.2.0
+
+flutter_native_splash:
+  color: "#42a5f5"
+  image: assets/icons/logo.png
+  
+  
 
 flutter: 
   uses-material-design: true
