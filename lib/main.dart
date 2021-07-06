@@ -30,7 +30,6 @@ Future<void> main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // initialBinding: AllControllerBinding(),
       title: "Application",
       getPages: AppPages.routes,
       theme: Apptheme().defaultheme,
