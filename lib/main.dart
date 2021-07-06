@@ -10,6 +10,7 @@ import 'app/routes/app_pages.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  AllControllerBinding().dependencies();
   LicenseRegistry.addLicense(
     () async* {
       final license = await rootBundle.loadString('google_fonts/OFL.txt');
@@ -19,7 +20,7 @@ Future<void> main() async {
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      //initialBinding: AllControllerBinding(),
+      // initialBinding: AllControllerBinding(),
       title: "Application",
       getPages: AppPages.routes,
       theme: Apptheme().defaultheme,

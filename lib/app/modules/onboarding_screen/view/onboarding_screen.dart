@@ -37,7 +37,9 @@ class OnboardingScreens extends StatelessWidget {
                   child: IconButton(
                     splashRadius: 100,
                     onPressed: () {
-                      Get.off(() => RegisterPage());
+                      Get.toNamed("/register");
+
+                      // Get.off(() => RegisterPage());
                     },
                     icon: _cutombuttons(),
                     splashColor: Kfadedblue,

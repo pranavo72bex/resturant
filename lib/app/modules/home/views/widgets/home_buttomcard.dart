@@ -33,13 +33,13 @@ class HomeButtomCard extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  Get.to(MywalletPage());
+                  Get.to(() => MywalletPage());
                 },
                 child: _Custombottomsheetbuttons(text: "Wallet"),
               ),
               InkWell(
                 onTap: () {
-                  Get.to(MyRewards());
+                  Get.to(() => MyRewards());
                 },
                 child: _Custombottomsheetbuttons(text: "Rewards"),
               ),

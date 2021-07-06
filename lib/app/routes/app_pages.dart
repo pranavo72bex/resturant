@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:restaurantsapp/app/binding/allcontroller_binding.dart';
+import 'package:restaurantsapp/app/modules/auth/login/view/login_page.dart';
 import 'package:restaurantsapp/app/modules/auth/register/view/register_view.dart';
 import 'package:restaurantsapp/app/modules/home/views/home_view.dart';
 import 'package:restaurantsapp/app/modules/home/views/widgets/bottomnaviagationbar.dart';
@@ -30,8 +31,14 @@ class AppPages {
       page: () => OnboardingScreens(),
     ),
     GetPage(
-      name: _Paths.HOME,
+      name: _Paths.RegisterPage,
       page: () => RegisterPage(),
+      binding: AllControllerBinding(),
+    ),
+    GetPage(
+      name: _Paths.login,
+      page: () => LoginPage(),
+      binding: AllControllerBinding(),
     ),
   ];
 }

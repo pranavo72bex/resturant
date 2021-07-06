@@ -9,8 +9,7 @@ import 'package:restaurantsapp/app/modules/auth/login/view/login_page.dart';
 import 'package:restaurantsapp/app/modules/auth/register/controller/registervalidator.dart';
 import 'package:restaurantsapp/app/modules/auth/register/view/widgets/otp_screens.dart';
 
-RegisterValidatorController registerValidatorController =
-    Get.put(RegisterValidatorController());
+RegisterValidatorController registerValidatorController = Get.find();
 
 class InputPage extends StatelessWidget {
   const InputPage({Key? key}) : super(key: key);
@@ -81,7 +80,8 @@ class InputPage extends StatelessWidget {
     registerValidatorController.checkRegister();
 
     if (registerValidatorController.RegisterFromKey.currentState!.validate()) {
-      Get.to(() => LoginPage());
+      Get.offNamed('/login');
+      // Get.to(() => LoginPage());
     }
   }
 
