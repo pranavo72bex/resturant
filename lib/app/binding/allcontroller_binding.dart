@@ -7,9 +7,21 @@ import 'package:restaurantsapp/app/modules/home/controllers/bottom_naviation_con
 class AllControllerBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut(() => BottomNavigationController());
-    Get.lazyPut(() => RadioButtonController());
-    Get.lazyPut(() => RegisterValidatorController());
-    Get.lazyPut(() => LoginValidatorController());
+    Get.lazyPut(
+      () => BottomNavigationController(),
+      fenix: true,
+    );
+    Get.lazyPut(
+      () => RadioButtonController(),
+      fenix: true,
+    );
+    Get.lazyPut(
+      () => RegisterValidatorController(),
+      fenix: true,
+    );
+    Get.lazyPut(
+      () => LoginValidatorController(),
+      fenix: true,
+    );
   }
 }
