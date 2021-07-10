@@ -65,7 +65,9 @@ class SideFloatingButtons extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(FeedsPage());
+                    },
                     child: Text(
                       'New products',
                       style: TextStyle(
