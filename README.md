@@ -1,16 +1,3 @@
 # restaurantsapp
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_2021-07-10-10-27-19](https://user-images.githubusercontent.com/71395812/125152135-5d1e9380-e16a-11eb-8be8-b2fb64da379c.png)  ![Screenshot_2021-07-10-10-01-42](https://user-images.githubusercontent.com/71395812/125151987-c520aa00-e169-11eb-9e05-4ec7a63089ee.png)  ![Screenshot_2021-07-10-10-01-51](https://user-images.githubusercontent.com/71395812/125151990-ca7df480-e169-11eb-9c97-a6f068f5ba45.png)  ![Screenshot_2021-07-10-10-02-02](https://user-images.githubusercontent.com/71395812/125152001-d7024d00-e169-11eb-8fcd-a9b65e09bab6.png)   ![Screenshot_2021-07-10-10-02-09](https://user-images.githubusercontent.com/71395812/125152007-de295b00-e169-11eb-9977-77f61a491fc0.png)   ![Screenshot_2021-07-10-10-02-19](https://user-images.githubusercontent.com/71395812/125152023-eb464a00-e169-11eb-8d86-bdf8ad6d1670.png)  ![Screenshot_2021-07-10-10-02-28](https://user-images.githubusercontent.com/71395812/125152034-f305ee80-e169-11eb-94e5-9d10aa060b6c.png)   ![Screenshot_2021-07-10-10-02-34](https://user-images.githubusercontent.com/71395812/125152052-0d3fcc80-e16a-11eb-8907-8157a305ec5d.png)   ![Screenshot_2021-07-10-10-02-57](https://user-images.githubusercontent.com/71395812/125152066-1466da80-e16a-11eb-91eb-5b18738c4aac.png)   ![Screenshot_2021-07-10-10-03-14](https://user-images.githubusercontent.com/71395812/125152070-1af55200-e16a-11eb-994f-2c475cc2ebc8.png)  ![Screenshot_2021-07-10-10-03-28](https://user-images.githubusercontent.com/71395812/125152078-20eb3300-e16a-11eb-80d0-44c3122a90ee.png)  ![Screenshot_2021-07-10-10-03-36](https://user-images.githubusercontent.com/71395812/125152083-26e11400-e16a-11eb-83af-0b8f18ff786e.png)   ![Screenshot_2021-07-10-10-04-00](https://user-images.githubusercontent.com/71395812/125152091-2fd1e580-e16a-11eb-8e13-804760456c05.png)  ![Screenshot_2021-07-10-10-04-08](https://user-images.githubusercontent.com/71395812/125152100-35c7c680-e16a-11eb-8162-33356191076b.png)   ![Screenshot_2021-07-10-10-04-42](https://user-images.githubusercontent.com/71395812/125152109-3ceed480-e16a-11eb-873a-ac9b9d4dc52a.png)  ![Screenshot_2021-07-10-10-09-12](https://user-images.githubusercontent.com/71395812/125152115-437d4c00-e16a-11eb-859e-d1ef727eb9ec.png)  ![Screenshot_2021-07-10-10-09-40](https://user-images.githubusercontent.com/71395812/125152118-4a0bc380-e16a-11eb-9ee5-e937cc67d13f.png)   ![Screenshot_2021-07-10-10-09-46](https://user-images.githubusercontent.com/71395812/125152126-5001a480-e16a-11eb-87d0-9d42f4ab7190.png)  ![Screenshot_2021-07-10-10-12-57](https://user-images.githubusercontent.com/71395812/125152130-55f78580-e16a-11eb-924f-eb18699595f5.png)
