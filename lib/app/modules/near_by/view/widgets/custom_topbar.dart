@@ -109,6 +109,11 @@ class CustomTopBar extends StatelessWidget {
           height: 60,
           width: 60,
           decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                shop,
+              ),
+            ),
             shape: BoxShape.circle,
             color: Colors.white,
             boxShadow: [
